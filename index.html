@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Xsatori Labs — Software Studio</title>
-<meta name="description" content="Xsatori Labs is an independent software studio designing and shipping consumer and marketplace products." />
+<meta name="description" content="Xsatori Labs is a B2B & C2C software studio in Phoenix, AZ — building apps, marketplaces, social platforms, blockchain products, and the internal systems that run a business." />
 <style>
   :root{
     --bg:#0a0b10; --bg2:#0f1119; --ink:#eef0f6; --muted:#9aa0b4; --faint:#6a7086;
@@ -45,9 +45,9 @@
   .hero{padding:110px 0 70px;text-align:center}
   .eyebrow{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;
     color:var(--a2);border:1px solid var(--line);border-radius:999px;padding:7px 15px;background:var(--card);margin-bottom:26px}
-  h1{font-size:clamp(34px,6vw,60px);line-height:1.05;font-weight:850;letter-spacing:-1px;max-width:14ch;margin:0 auto 22px}
+  h1{font-size:clamp(34px,6vw,60px);line-height:1.05;font-weight:850;letter-spacing:-1px;max-width:15ch;margin:0 auto 22px}
   h1 .grad{background:linear-gradient(120deg,var(--a1),var(--a2) 55%,var(--a3));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .lede{font-size:clamp(16px,2.3vw,19px);color:var(--muted);max-width:60ch;margin:0 auto 34px}
+  .lede{font-size:clamp(16px,2.3vw,19px);color:var(--muted);max-width:64ch;margin:0 auto 34px}
   .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
   .btn.ghost:hover{background:var(--card);box-shadow:none}
@@ -76,6 +76,13 @@
   .card .link .u{color:var(--faint);font-weight:600}
   .card .arrow{transition:transform .15s}
   .card:hover .arrow{transform:translateX(3px)}
+
+  /* capabilities */
+  .caps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:6px}
+  .cap{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 20px}
+  .cap .ci{font-size:22px;margin-bottom:12px}
+  .cap h4{font-size:16px;font-weight:800;letter-spacing:-.2px;margin-bottom:7px}
+  .cap p{color:var(--muted);font-size:13.8px}
 
   /* about */
   .about{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
@@ -120,9 +127,9 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow">Independent Software Studio</span>
-      <h1>We build products people <span class="grad">come back to.</span></h1>
-      <p class="lede">Xsatori Labs designs and ships consumer apps and marketplaces — from social games to sports investing — with a focus on craft, speed, and things worth returning to.</p>
+      <span class="eyebrow">B2B &amp; C2C Software Studio</span>
+      <h1>If you can imagine it, <span class="grad">we build it.</span></h1>
+      <p class="lede">Xsatori Labs is a Phoenix-based software studio building across the whole stack of what a business needs — consumer apps, two-sided marketplaces, social platforms, blockchain products, and the internal systems that quietly hold a company together.</p>
       <div class="cta-row">
         <a class="btn" href="#products">See our work</a>
         <a class="btn ghost" href="#contact">Work with us</a>
@@ -135,7 +142,7 @@
       <div class="sec-head">
         <div class="k">Portfolio</div>
         <h2>What we're building</h2>
-        <p>A growing portfolio of products across gaming, fintech, and platforms.</p>
+        <p>A growing portfolio of products across gaming, fintech, and enterprise software.</p>
       </div>
       <div class="grid">
 
@@ -148,21 +155,63 @@
         </a>
 
         <a class="card" href="https://xsatori.com" target="_blank" rel="noopener">
-          <span class="tag soon">● In development</span>
+          <span class="tag live">● Live</span>
           <div class="ic">📈</div>
           <h3>Xsatori</h3>
-          <p>A sports-investing marketplace — a modern platform for the sports market. <em>[Edit this line with your own one-sentence pitch.]</em></p>
+          <p>A sports-investing marketplace — trade positions on the games and athletes you follow, with the depth and discipline of a real exchange.</p>
           <span class="link">xsatori.com <span class="arrow">→</span></span>
         </a>
 
-        <div class="card">
-          <span class="tag soon">● In development</span>
+        <a class="card" href="https://www.flatstaffing.com" target="_blank" rel="noopener">
+          <span class="tag live">● Live</span>
           <div class="ic">🧩</div>
           <h3>Flat OS</h3>
-          <p><em>[Add a one-sentence description of Flat OS here — what it is and who it's for.]</em></p>
-          <span class="link" style="color:var(--faint)">Coming soon</span>
-        </div>
+          <p>Custom B2B software for internal efficiency — one hub that bridges all your third-party tools into a single system your team actually wants to use.</p>
+          <span class="link">flatstaffing.com <span class="arrow">→</span></span>
+        </a>
 
+      </div>
+    </div>
+  </section>
+
+  <section id="capabilities">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="k">Capabilities</div>
+        <h2>Anything you can imagine or need</h2>
+        <p>We don't box ourselves into one category. If it ships as software, we design, engineer, and launch it end to end.</p>
+      </div>
+      <div class="caps">
+        <div class="cap">
+          <div class="ci">📱</div>
+          <h4>Apps &amp; Platforms</h4>
+          <p>Consumer and enterprise apps for web, iOS, and Android — from first sketch to store-ready release.</p>
+        </div>
+        <div class="cap">
+          <div class="ci">🛒</div>
+          <h4>Marketplaces</h4>
+          <p>Two-sided and C2C marketplaces with payments, matching, trust, and settlement built in.</p>
+        </div>
+        <div class="cap">
+          <div class="ci">⛓️</div>
+          <h4>Blockchain</h4>
+          <p>Tokens, smart contracts, wallets, and on-chain integrations — the crypto layer, done responsibly.</p>
+        </div>
+        <div class="cap">
+          <div class="ci">💬</div>
+          <h4>Social Platforms</h4>
+          <p>Communities, feeds, and real-time social products designed to earn a place in someone's day.</p>
+        </div>
+        <div class="cap">
+          <div class="ci">🔗</div>
+          <h4>Internal Software Hubs</h4>
+          <p>One internal system that bridges your CRM, billing, scheduling, payroll, and comms into a single source of truth.</p>
+        </div>
+        <div class="cap">
+          <div class="ci">🤖</div>
+          <h4>Automation &amp; AI</h4>
+          <p>Custom tooling and AI-assisted workflows that cut the busywork out of how your business runs.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -174,14 +223,15 @@
           <div class="k">About</div>
           <h2>A studio, not a one-off.</h2>
         </div>
-        <p>Xsatori Labs is an independent software studio building a portfolio of consumer and marketplace products. We take ideas from a first sketch to a shipped, polished app — designing, engineering, and launching under one roof.</p>
-        <p>We care about the details users feel: fast, considered products that earn a place in someone's day and give them a reason to come back.</p>
+        <p>Xsatori Labs is a B2B and C2C software studio. We build whatever a business can imagine — consumer apps, marketplaces, social platforms, blockchain products, and the internal software that ties an entire operation together.</p>
+        <p>Our specialty is bridging the gap: a single internal hub that connects all of your third-party tools — CRM, billing, scheduling, payroll, communications — into one system your team actually wants to use. No more jumping between ten tabs to get one thing done.</p>
+        <p>From a first sketch to a shipped, polished product, we handle design, engineering, and launch under one roof. Whether it's a customer-facing app, a two-sided marketplace, an on-chain integration, or the operational backbone no one sees — if you can describe it, we can build it.</p>
       </div>
       <div class="facts">
         <div class="row"><span>Company</span><b>Xsatori Labs LLC</b></div>
-        <div class="row"><span>Based in</span><b>Michigan, USA</b></div>
-        <div class="row"><span>Focus</span><b>Apps · Marketplaces</b></div>
-        <div class="row"><span>Live products</span><b>1 &nbsp;·&nbsp; more in build</b></div>
+        <div class="row"><span>Based in</span><b>Phoenix, AZ</b></div>
+        <div class="row"><span>Focus</span><b>Apps · Marketplaces · Blockchain · Internal Software</b></div>
+        <div class="row"><span>Live products</span><b>3 &nbsp;·&nbsp; more in build</b></div>
       </div>
     </div>
   </section>
@@ -189,8 +239,8 @@
   <section id="contact">
     <div class="wrap">
       <div class="contact">
-        <h2>Let's talk.</h2>
-        <p>Partnerships, press, or just want to reach the studio? We'd love to hear from you.</p>
+        <h2>Let's build something.</h2>
+        <p>Have a product in mind, or a mess of tools you want tied together? Tell us what you need — we'll figure out how to build it.</p>
         <a class="btn" href="mailto:hello@xsatorilabs.net">hello@xsatorilabs.net</a>
       </div>
     </div>
@@ -199,10 +249,8 @@
 
 <footer>
   <div class="wrap foot">
-    <div>© 2026 Xsatori Labs LLC · All rights reserved.</div>
+    <div>© 2026 Xsatori Labs LLC · Phoenix, AZ · All rights reserved.</div>
     <div class="fl">
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
       <a href="mailto:hello@xsatorilabs.net">Contact</a>
     </div>
   </div>
