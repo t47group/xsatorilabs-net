@@ -1,0 +1,36 @@
+{
+  "name": "Xsatori Labs",
+  "tagline": "Software Studio",
+  "logo": "XL",
+  "url": "https://xsatorilabs.net",
+  "nav": [["Products","https://xsatorilabs.net/#products"],["Capabilities","https://xsatorilabs.net/#capabilities"],["About","https://xsatorilabs.net/#about"]],
+  "cta_href": "mailto:hello@xsatorilabs.net",
+  "cta_label": "Start a project",
+  "cta_head": "Have something you need built?",
+  "cta_copy": "Tell us what you're trying to ship and we'll tell you straight whether we're the right studio for it.",
+  "blog_head": "Notes from the studio.",
+  "blog_desc": "How we scope, price, and ship software — from the team behind Hookah Royale, Flat OS, Xsatori, NMWWD, and Credit4Vets.",
+  "footer_note": "© 2026 Xsatori Labs · Phoenix, AZ · Part of the T47 Group family of companies.",
+  "footer_links": [["Products","https://xsatorilabs.net/#products"],["Insights","https://xsatorilabs.net/blog/"],["T47 Group","https://t47group.com"],["Contact","mailto:hello@xsatorilabs.net"]],
+  "org_sameas": ["https://t47group.com"],
+  "author": {
+    "name": "Nino Mihilli",
+    "initials": "NM",
+    "url": "https://www.ninomihilli.com",
+    "jobTitle": "Founder, Xsatori Labs",
+    "bio": "Founder of Xsatori Labs and T47 Group. Twenty years building and scaling businesses, now shipping software for clients out of Phoenix, Arizona.",
+    "sameAs": ["https://www.ninomihilli.com","https://t47group.com","https://xsatorilabs.net"]
+  },
+  "theme": {
+    "serif": "ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif",
+    "sans": "-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif",
+    "wrap": "760px",
+    "vars": {"bg":"#0a0b10","bg2":"#0f1119","ink":"#eef0f6","muted":"#9aa0b4","faint":"#6a7086","line":"rgba(255,255,255,.08)","card":"rgba(255,255,255,.035)","accent":"#7c5cff","accent2":"#31d0c6","prose":"#c9cddb"},
+    "bgimage": "radial-gradient(880px 520px at 84% -10%, rgba(124,92,255,.16), transparent 60%),radial-gradient(720px 500px at -6% 10%, rgba(49,208,198,.10), transparent 58%)",
+    "headerbg": "rgba(10,11,16,.76)",
+    "ctabg": "linear-gradient(180deg,rgba(124,92,255,.12),transparent)",
+    "accentgrad": "linear-gradient(135deg,#7c5cff,#31d0c6)",
+    "logoink": "#0a0b10",
+    "logoshadow": "0 10px 30px rgba(124,92,255,.34)"
+  }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+<title>Xsatori Labs — Insights</title>
+<link>https://xsatorilabs.net/blog/</link>
+<description>How we scope, price, and ship software — from the team behind Hookah Royale, Flat OS, Xsatori, NMWWD, and Credit4Vets.</description>
+<language>en-us</language><lastBuildDate>Wed, 09 Sep 2026 18:19:45 +0000</lastBuildDate>
+<item><title>What a two-sided marketplace actually costs to build</title>
+<link>https://xsatorilabs.net/blog/two-sided-marketplace-cost/</link>
+<guid isPermaLink="true">https://xsatorilabs.net/blog/two-sided-marketplace-cost/</guid>
+<description>Most marketplace quotes are wrong because they price the wrong thing. Here's where the money actually goes, and which line items nobody warns you about.</description>
+<pubDate>Wed, 09 Sep 2026 13:00:00 +0000</pubDate>
+</item></channel></rss>
