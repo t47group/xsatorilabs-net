@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The cold-start problem: why marketplaces fail before they launch — Xsatori Labs</title>
+<meta name="description" content="Most failed marketplaces had working software. What they didn&#x27;t have was a credible plan for the first ninety days of emptiness." />
+<link rel="canonical" href="https://xsatorilabs.net/blog/marketplace-cold-start-problem/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The cold-start problem: why marketplaces fail before they launch — Xsatori Labs" />
+<meta property="og:description" content="Most failed marketplaces had working software. What they didn&#x27;t have was a credible plan for the first ninety days of emptiness." />
+<meta property="og:url" content="https://xsatorilabs.net/blog/marketplace-cold-start-problem/" />
+<meta property="og:site_name" content="Xsatori Labs" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The cold-start problem: why marketplaces fail before they launch — Xsatori Labs" />
+<meta name="twitter:description" content="Most failed marketplaces had working software. What they didn&#x27;t have was a credible plan for the first ninety days of emptiness." />
+<link rel="alternate" type="application/rss+xml" title="Xsatori Labs — Insights" href="https://xsatorilabs.net/rss.xml" />
+<style>:root{--bg:#0a0b10;--bg2:#0f1119;--ink:#eef0f6;--muted:#9aa0b4;--faint:#6a7086;--line:rgba(255,255,255,.08);--card:rgba(255,255,255,.035);--accent:#7c5cff;--accent2:#31d0c6;--prose:#c9cddb;--serif:ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(880px 520px at 84% -10%, rgba(124,92,255,.16), transparent 60%),radial-gradient(720px 500px at -6% 10%, rgba(49,208,198,.10), transparent 58%);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 26px}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(10,11,16,.76);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1120px;margin:0 auto;padding:0 26px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}
+.logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
+nav .links{display:flex;gap:28px;align-items:center}
+nav .links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+nav .links a:hover{color:var(--ink)}
+nav .links a.on{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;background:linear-gradient(135deg,#7c5cff,#31d0c6);color:#0a0b10;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+@media(max-width:760px){nav .links a:not(.btn){display:none}}
+.phead{padding:74px 0 34px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;display:block}
+h1{font-family:var(--serif);font-size:clamp(30px,5vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.meta{color:var(--faint);font-size:13.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.meta .dot{opacity:.5}
+article{padding:38px 0 20px;font-size:17px}
+article p{margin-bottom:22px;color:var(--prose)}
+article h2{font-family:var(--serif);font-size:clamp(22px,3.4vw,29px);font-weight:700;letter-spacing:-.3px;margin:42px 0 16px}
+article h3{font-size:19px;font-weight:800;margin:30px 0 12px}
+article ul,article ol{margin:0 0 22px 22px;color:var(--prose)}
+article li{margin-bottom:9px}
+article a{color:var(--accent2);border-bottom:1px solid var(--line)}
+article a:hover{border-bottom-color:var(--accent2)}
+article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:0 0 22px;color:var(--muted);font-style:italic}
+article code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14.5px}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article strong{color:var(--ink)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:34px 0 0}
+.tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card)}
+.bio{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:38px 0 0}
+.bio .av{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6)}
+.bio b{font-size:15px}
+.bio p{color:var(--muted);font-size:14px;margin:5px 0 0}
+.bio a{color:var(--accent2)}
+.postlist{padding:14px 0 40px}
+.item{display:block;border-bottom:1px solid var(--line);padding:26px 0;transition:opacity .15s}
+.item:hover{opacity:.82}
+.item .d{font-size:12.5px;color:var(--faint);letter-spacing:.4px;margin-bottom:9px}
+.item h2{font-family:var(--serif);font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.3px;margin-bottom:9px}
+.item p{color:var(--muted);font-size:15px}
+.item .more{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--accent2)}
+.cta{text-align:center;background:linear-gradient(180deg,rgba(124,92,255,.12),transparent);border:1px solid var(--line);border-radius:22px;padding:46px 28px;margin:46px 0}
+.cta h2{font-family:var(--serif);font-size:clamp(23px,3.6vw,31px);font-weight:700;margin-bottom:11px}
+.cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px;max-width:1120px;margin:0 auto;padding:0 26px}
+.foot a{color:var(--muted)} .foot a:hover{color:var(--ink)}
+.backlink{display:inline-block;margin:26px 0 0;font-size:14px;color:var(--muted);font-weight:600}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "The cold-start problem: why marketplaces fail before they launch", "description": "Most failed marketplaces had working software. What they didn't have was a credible plan for the first ninety days of emptiness.", "datePublished": "2026-09-11", "dateModified": "2026-09-11", "url": "https://xsatorilabs.net/blog/marketplace-cold-start-problem/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xsatorilabs.net/blog/marketplace-cold-start-problem/"}, "author": {"@type": "Person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com", "https://t47group.com", "https://xsatorilabs.net"]}, "publisher": {"@type": "Organization", "name": "Xsatori Labs", "url": "https://xsatorilabs.net/", "sameAs": ["https://t47group.com"], "founder": {"@type": "Person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com", "https://t47group.com", "https://xsatorilabs.net"]}}, "keywords": "Marketplaces, Go-to-Market, Product Strategy", "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xsatorilabs.net/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://xsatorilabs.net/blog/"}, {"@type": "ListItem", "position": 3, "name": "The cold-start problem: why marketplaces fail before they launch", "item": "https://xsatorilabs.net/blog/marketplace-cold-start-problem/"}]}]}</script>
+</head>
+<body>
+<header><div class="nav">
+  <a class="brand" href="https://xsatorilabs.net/">
+    <div class="logo">XL</div>
+    <div>Xsatori Labs <small>Software Studio</small></div>
+  </a>
+  <nav class="links">
+    <a href="https://xsatorilabs.net/#products">Products</a><a href="https://xsatorilabs.net/#capabilities">Capabilities</a><a href="https://xsatorilabs.net/#about">About</a>
+    <a class="on" href="https://xsatorilabs.net/blog/">Insights</a>
+    <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap phead">
+  <span class="kicker">Product Strategy</span>
+  <h1>The cold-start problem: why marketplaces fail before they launch</h1>
+  <div class="meta"><span>Nino Mihilli</span><span class="dot">·</span>
+  <time datetime="2026-09-11">September 11, 2026</time>
+  <span class="dot">·</span><span>3 min read</span></div>
+</div>
+<div class="wrap"><article><p>A marketplace is worth nothing on its launch day. That is not pessimism, it is arithmetic. Buyers arrive, find no inventory, and leave. Sellers arrive, find no buyers, and stop listing. Both sides are behaving rationally and the result is a dead product.</p>
+<p>This is the cold-start problem, and it is the single most reliable killer of marketplace startups. Not bugs. Not scaling. Emptiness.</p>
+<h2>Why it is not a marketing problem</h2>
+<p>The instinct is to treat this as a traffic problem — build the thing, then buy ads until enough people show up.</p>
+<p>This fails because you are paying to send users into a bad experience. A buyer who arrives to an empty marketplace does not come back when it fills up. You spent acquisition budget to permanently burn a prospect. Do this at scale and you have converted your funding into a list of people who have already decided your product does not work.</p>
+<p>The sequencing has to be the other way around. You need enough density to make the experience good <em>before</em> you spend on getting people to see it.</p>
+<h2>The four approaches that actually work</h2>
+<p><strong>Go absurdly narrow.</strong> Thin supply feels dense if the market is small enough. Twenty listings is nothing nationally and plenty for one neighborhood, one campus, or one niche category. Most successful marketplaces launched somewhere embarrassingly specific and expanded outward. Pick the smallest market where you can look full.</p>
+<p><strong>Recruit one side manually.</strong> Not scalably, not through ads — by hand, by phone, by showing up. Founders sourcing early supply personally is not a failure to build a system; it is the correct move at this stage and it teaches you what the supply side actually cares about, which no survey will.</p>
+<p><strong>Subsidize the harder side.</strong> Figure out which side is scarcer and pay for it, in cash, fees waived, or guaranteed minimums. This is expensive and it is supposed to be. The question is whether the density it buys becomes self-sustaining before the money runs out.</p>
+<p><strong>Be useful to one side alone.</strong> The strongest play when you can find it: build something that has standalone value to one side before the other side exists. A tool sellers would use even with zero buyers. Then flip on the marketplace once supply has accumulated for reasons that had nothing to do with your marketplace.</p>
+<h2>What this means for the build</h2>
+<p>This is the part that concerns us as the people writing the software, because the cold-start plan should change what gets built.</p>
+<p>If you are launching in one city, you do not need the geographic infrastructure. If you are hand-recruiting supply, your seller onboarding can be a spreadsheet and a human for months — but your <em>admin tooling</em> needs to be excellent on day one, because your team is doing manually what the product will eventually automate. If you are subsidizing one side, you need the accounting to track that subsidy from the first transaction, or you will not know whether it is working.</p>
+<p>We have watched teams build beautiful self-serve seller onboarding that no seller used for a year, because every early seller was recruited over the phone and set up by hand. That was months of engineering spent on the wrong end of the timeline.</p>
+<h2>The question to answer first</h2>
+<p>Before writing a line of code, answer this: <em>on day ninety, where does the inventory come from, and who specifically put it there?</em></p>
+<p>If the answer involves a growth strategy that begins after launch, you do not have a plan, you have a hope. If the answer is a list of names and a phone number, you are in far better shape than most funded marketplace startups.</p>
+<p>When we scope marketplace work, we ask this before we ask about features. It changes the architecture, the sequencing, and often the budget — usually downward, because a narrow launch needs less software than the version in your head.</p>
+<p>If you are working on a marketplace and want a straight conversation about what to build first, <a href="mailto:hello@xsatorilabs.net">get in touch</a>.</p></article>
+<div class="tags"><span class="tag">Marketplaces</span><span class="tag">Go-to-Market</span><span class="tag">Product Strategy</span></div>
+<div class="bio"><div class="av">NM</div>
+        <div><b>Nino Mihilli</b><p>Founder of Xsatori Labs and T47 Group. Twenty years building and scaling businesses, now shipping software for clients out of Phoenix, Arizona. <a href="https://www.ninomihilli.com">www.ninomihilli.com</a></p></div></div>
+<div class="cta"><h2>Have something you need built?</h2><p>Tell us what you're trying to ship and we'll tell you straight whether we're the right studio for it.</p>
+      <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a></div>
+      <a class="backlink" href="https://xsatorilabs.net/blog/">← All insights</a></div>
+</main>
+<footer><div class="foot">
+  <div>© 2026 Xsatori Labs · Phoenix, AZ · Part of the T47 Group family of companies.</div>
+  <div><a href="https://xsatorilabs.net/#products">Products</a> · <a href="https://xsatorilabs.net/blog/">Insights</a> · <a href="https://t47group.com">T47 Group</a> · <a href="mailto:hello@xsatorilabs.net">Contact</a></div>
+</div></footer>
+</body>
+</html>
