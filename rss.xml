@@ -3,8 +3,13 @@
 <title>Xsatori Labs — Insights</title>
 <link>https://xsatorilabs.net/blog/</link>
 <description>How we scope, price, and ship software — from the team behind Hookah Royale, Flat OS, Xsatori, NMWWD, and Credit4Vets.</description>
-<language>en-us</language><lastBuildDate>Tue, 15 Sep 2026 17:25:37 +0000</lastBuildDate>
-<item><title>Build vs. buy: when internal software is worth writing yourself</title>
+<language>en-us</language><lastBuildDate>Wed, 16 Sep 2026 17:24:30 +0000</lastBuildDate>
+<item><title>Building Hookah Royale: real-time multiplayer on a small team</title>
+<link>https://xsatorilabs.net/blog/building-hookah-royale-realtime-multiplayer/</link>
+<guid isPermaLink="true">https://xsatorilabs.net/blog/building-hookah-royale-realtime-multiplayer/</guid>
+<description>A case study in shipping synchronized card games across web, iOS, and Android — and the architectural decisions that kept the team small.</description>
+<pubDate>Wed, 16 Sep 2026 13:00:00 +0000</pubDate>
+</item><item><title>Build vs. buy: when internal software is worth writing yourself</title>
 <link>https://xsatorilabs.net/blog/build-vs-buy-internal-software/</link>
 <guid isPermaLink="true">https://xsatorilabs.net/blog/build-vs-buy-internal-software/</guid>
 <description>Most companies should buy. Here's the specific set of conditions under which building your own internal system actually pays back, and how to tell which side you're on.</description>
