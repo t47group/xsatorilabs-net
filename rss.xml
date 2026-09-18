@@ -3,8 +3,13 @@
 <title>Xsatori Labs — Insights</title>
 <link>https://xsatorilabs.net/blog/</link>
 <description>How we scope, price, and ship software — from the team behind Hookah Royale, Flat OS, Xsatori, NMWWD, and Credit4Vets.</description>
-<language>en-us</language><lastBuildDate>Thu, 17 Sep 2026 17:23:46 +0000</lastBuildDate>
-<item><title>Building Hookah Royale: real-time multiplayer on a small team</title>
+<language>en-us</language><lastBuildDate>Fri, 18 Sep 2026 16:51:38 +0000</lastBuildDate>
+<item><title>Fixed bid vs. time and materials: which contract actually protects you</title>
+<link>https://xsatorilabs.net/blog/fixed-bid-vs-time-and-materials/</link>
+<guid isPermaLink="true">https://xsatorilabs.net/blog/fixed-bid-vs-time-and-materials/</guid>
+<description>Fixed bid feels safer and often isn't. Here's what each structure really does to incentives, and how to pick without getting burned.</description>
+<pubDate>Fri, 18 Sep 2026 13:00:00 +0000</pubDate>
+</item><item><title>Building Hookah Royale: real-time multiplayer on a small team</title>
 <link>https://xsatorilabs.net/blog/building-hookah-royale-realtime-multiplayer/</link>
 <guid isPermaLink="true">https://xsatorilabs.net/blog/building-hookah-royale-realtime-multiplayer/</guid>
 <description>A case study in shipping synchronized card games across web, iOS, and Android — and the architectural decisions that kept the team small.</description>

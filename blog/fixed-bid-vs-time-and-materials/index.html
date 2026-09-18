@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fixed bid vs. time and materials: which contract actually protects you — Xsatori Labs</title>
+<meta name="description" content="Fixed bid feels safer and often isn&#x27;t. Here&#x27;s what each structure really does to incentives, and how to pick without getting burned." />
+<link rel="canonical" href="https://xsatorilabs.net/blog/fixed-bid-vs-time-and-materials/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Fixed bid vs. time and materials: which contract actually protects you — Xsatori Labs" />
+<meta property="og:description" content="Fixed bid feels safer and often isn&#x27;t. Here&#x27;s what each structure really does to incentives, and how to pick without getting burned." />
+<meta property="og:url" content="https://xsatorilabs.net/blog/fixed-bid-vs-time-and-materials/" />
+<meta property="og:site_name" content="Xsatori Labs" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Fixed bid vs. time and materials: which contract actually protects you — Xsatori Labs" />
+<meta name="twitter:description" content="Fixed bid feels safer and often isn&#x27;t. Here&#x27;s what each structure really does to incentives, and how to pick without getting burned." />
+<link rel="alternate" type="application/rss+xml" title="Xsatori Labs — Insights" href="https://xsatorilabs.net/rss.xml" />
+<style>:root{--bg:#0a0b10;--bg2:#0f1119;--ink:#eef0f6;--muted:#9aa0b4;--faint:#6a7086;--line:rgba(255,255,255,.08);--card:rgba(255,255,255,.035);--accent:#7c5cff;--accent2:#31d0c6;--prose:#c9cddb;--serif:ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(880px 520px at 84% -10%, rgba(124,92,255,.16), transparent 60%),radial-gradient(720px 500px at -6% 10%, rgba(49,208,198,.10), transparent 58%);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 26px}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(10,11,16,.76);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1120px;margin:0 auto;padding:0 26px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}
+.logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
+nav .links{display:flex;gap:28px;align-items:center}
+nav .links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+nav .links a:hover{color:var(--ink)}
+nav .links a.on{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;background:linear-gradient(135deg,#7c5cff,#31d0c6);color:#0a0b10;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+@media(max-width:760px){nav .links a:not(.btn){display:none}}
+.phead{padding:74px 0 34px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;display:block}
+h1{font-family:var(--serif);font-size:clamp(30px,5vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.meta{color:var(--faint);font-size:13.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.meta .dot{opacity:.5}
+article{padding:38px 0 20px;font-size:17px}
+article p{margin-bottom:22px;color:var(--prose)}
+article h2{font-family:var(--serif);font-size:clamp(22px,3.4vw,29px);font-weight:700;letter-spacing:-.3px;margin:42px 0 16px}
+article h3{font-size:19px;font-weight:800;margin:30px 0 12px}
+article ul,article ol{margin:0 0 22px 22px;color:var(--prose)}
+article li{margin-bottom:9px}
+article a{color:var(--accent2);border-bottom:1px solid var(--line)}
+article a:hover{border-bottom-color:var(--accent2)}
+article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:0 0 22px;color:var(--muted);font-style:italic}
+article code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14.5px}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article strong{color:var(--ink)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:34px 0 0}
+.tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card)}
+.bio{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:38px 0 0}
+.bio .av{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6)}
+.bio b{font-size:15px}
+.bio p{color:var(--muted);font-size:14px;margin:5px 0 0}
+.bio a{color:var(--accent2)}
+.postlist{padding:14px 0 40px}
+.item{display:block;border-bottom:1px solid var(--line);padding:26px 0;transition:opacity .15s}
+.item:hover{opacity:.82}
+.item .d{font-size:12.5px;color:var(--faint);letter-spacing:.4px;margin-bottom:9px}
+.item h2{font-family:var(--serif);font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.3px;margin-bottom:9px}
+.item p{color:var(--muted);font-size:15px}
+.item .more{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--accent2)}
+.cta{text-align:center;background:linear-gradient(180deg,rgba(124,92,255,.12),transparent);border:1px solid var(--line);border-radius:22px;padding:46px 28px;margin:46px 0}
+.cta h2{font-family:var(--serif);font-size:clamp(23px,3.6vw,31px);font-weight:700;margin-bottom:11px}
+.cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px;max-width:1120px;margin:0 auto;padding:0 26px}
+.foot a{color:var(--muted)} .foot a:hover{color:var(--ink)}
+.backlink{display:inline-block;margin:26px 0 0;font-size:14px;color:var(--muted);font-weight:600}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Fixed bid vs. time and materials: which contract actually protects you", "description": "Fixed bid feels safer and often isn't. Here's what each structure really does to incentives, and how to pick without getting burned.", "datePublished": "2026-09-18", "dateModified": "2026-09-18", "url": "https://xsatorilabs.net/blog/fixed-bid-vs-time-and-materials/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xsatorilabs.net/blog/fixed-bid-vs-time-and-materials/"}, "author": {"@type": "Person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com", "https://t47group.com", "https://xsatorilabs.net"]}, "publisher": {"@type": "Organization", "name": "Xsatori Labs", "url": "https://xsatorilabs.net/", "sameAs": ["https://t47group.com"], "founder": {"@type": "Person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com", "https://t47group.com", "https://xsatorilabs.net"]}}, "keywords": "Contracts, Budgeting, Working With Studios", "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xsatorilabs.net/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://xsatorilabs.net/blog/"}, {"@type": "ListItem", "position": 3, "name": "Fixed bid vs. time and materials: which contract actually protects you", "item": "https://xsatorilabs.net/blog/fixed-bid-vs-time-and-materials/"}]}]}</script>
+</head>
+<body>
+<header><div class="nav">
+  <a class="brand" href="https://xsatorilabs.net/">
+    <div class="logo">XL</div>
+    <div>Xsatori Labs <small>Software Studio</small></div>
+  </a>
+  <nav class="links">
+    <a href="https://xsatorilabs.net/#products">Products</a><a href="https://xsatorilabs.net/#capabilities">Capabilities</a><a href="https://xsatorilabs.net/#about">About</a>
+    <a class="on" href="https://xsatorilabs.net/blog/">Insights</a>
+    <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap phead">
+  <span class="kicker">Working Together</span>
+  <h1>Fixed bid vs. time and materials: which contract actually protects you</h1>
+  <div class="meta"><span>Nino Mihilli</span><span class="dot">·</span>
+  <time datetime="2026-09-18">September 18, 2026</time>
+  <span class="dot">·</span><span>3 min read</span></div>
+</div>
+<div class="wrap"><article><p>Almost every client asks for a fixed bid. The instinct is sound — you want to know what this costs before you commit. But fixed bid does not remove risk from a software project. It relocates it, and it changes what your development team is incentivized to do.</p>
+<p>Here is the honest version of both structures.</p>
+<h2>What fixed bid actually does</h2>
+<p>In a fixed bid, the studio commits to a scope for a price. If it takes longer than estimated, that is the studio's loss.</p>
+<p>Because that risk is real, any competent studio prices it in. The number you get is not the expected cost — it is the expected cost plus a buffer sized to the uncertainty. On a well-understood project that buffer is modest. On a vague one it is large, and you are paying for the vagueness whether or not it materializes.</p>
+<p>The deeper problem is incentives. Once the price is locked, every change is a threat to the studio's margin, and the correct commercial behavior is to define scope narrowly and treat everything else as a change order. This is not bad faith. It is what the contract rewards. The result is a relationship where you say "can it also do X" and someone reaches for the statement of work.</p>
+<p>That is fine when you know exactly what you want. It is corrosive when you are still discovering it — which, on genuinely new products, you always are.</p>
+<h2>What time and materials actually does</h2>
+<p>You pay for the time spent. Risk sits with you.</p>
+<p>The incentive problem inverts: nothing in the structure stops a project from expanding indefinitely, and you are trusting that the team is efficient and honest about where hours went. That trust has to be earned by transparency, not asserted in a contract.</p>
+<p>What it buys you is the ability to change your mind without a negotiation. When week six reveals that the thing you specified in week one is not the thing users need, you just build the right thing. Under fixed bid that same discovery is a contract amendment and an argument.</p>
+<h2>How we actually think about it</h2>
+<p>The useful question is not which structure is safer. It is <strong>how much uncertainty does this project contain?</strong></p>
+<p>Fixed bid works well when the answer is "very little." A defined integration. A redesign of an existing flow. A migration with known endpoints. Work where we can see the whole shape before starting, and our estimate is a real estimate rather than a guess with a markup.</p>
+<p>Time and materials works better when the answer is "a lot." New products. Anything where user feedback should change direction. Anything touching systems nobody has fully documented, which is most internal systems at most companies.</p>
+<h2>The structure we prefer</h2>
+<p>For most new-product work we split it.</p>
+<p><strong>A fixed-price discovery phase.</strong> Small, defined, with concrete deliverables: technical approach, architecture, a real scope, and an estimate we will stand behind. Two to four weeks, priced firmly. You get something useful whether or not you continue with us — and if the estimate that comes out of it is more than you want to spend, you have learned that cheaply.</p>
+<p><strong>Then the build, structured against what discovery found.</strong> Frequently fixed bid at that point, because after discovery the uncertainty is genuinely lower and we can price it without a defensive buffer. Sometimes time and materials with a cap and a defined review cadence, when the work is inherently exploratory.</p>
+<p>This gets you the certainty fixed bid promises, without paying the vagueness premium of pricing a project nobody understands yet.</p>
+<h2>Questions worth asking any studio</h2>
+<ul><li>What happens when we want a change? Get the actual process, not "we're flexible."</li><li>What is in scope that I would assume is in scope but isn't? Admin tooling and data migration are the usual answers.</li><li>Who owns the code, the accounts, and the infrastructure? The answer should be you, in writing.</li><li>What does handoff look like if we part ways at any point?</li></ul>
+<p>A studio that answers those crisply is one that has thought about the relationship past signing. A studio that gets vague is telling you something.</p>
+<p>If you want a straight conversation about how to structure your project, <a href="mailto:hello@xsatorilabs.net">reach out</a>. We will tell you which structure fits — including when the answer is that you do not need us yet.</p></article>
+<div class="tags"><span class="tag">Contracts</span><span class="tag">Budgeting</span><span class="tag">Working With Studios</span></div>
+<div class="bio"><div class="av">NM</div>
+        <div><b>Nino Mihilli</b><p>Founder of Xsatori Labs and T47 Group. Twenty years building and scaling businesses, now shipping software for clients out of Phoenix, Arizona. <a href="https://www.ninomihilli.com">www.ninomihilli.com</a></p></div></div>
+<div class="cta"><h2>Have something you need built?</h2><p>Tell us what you're trying to ship and we'll tell you straight whether we're the right studio for it.</p>
+      <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a></div>
+      <a class="backlink" href="https://xsatorilabs.net/blog/">← All insights</a></div>
+</main>
+<footer><div class="foot">
+  <div>© 2026 Xsatori Labs · Phoenix, AZ · Part of the T47 Group family of companies.</div>
+  <div><a href="https://xsatorilabs.net/#products">Products</a> · <a href="https://xsatorilabs.net/blog/">Insights</a> · <a href="https://t47group.com">T47 Group</a> · <a href="mailto:hello@xsatorilabs.net">Contact</a></div>
+</div></footer>
+</body>
+</html>
