@@ -156,7 +156,11 @@ footer{{border-top:1px solid var(--line);margin-top:40px;padding:32px 0}}
 <meta property="og:description" content="{html.escape(desc, quote=True)}" />
 <meta property="og:url" content="{canonical}" />
 <meta property="og:site_name" content="{html.escape(CFG['name'])}" />
+<meta property="og:image" content="{CFG['url']}/og-image.png" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="{CFG['url']}/og-image.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <meta name="twitter:title" content="{html.escape(title, quote=True)}" />
 <meta name="twitter:description" content="{html.escape(desc, quote=True)}" />
 <link rel="alternate" type="application/rss+xml" title="{html.escape(CFG['name'])} — Insights" href="{CFG['url']}/rss.xml" />
@@ -191,11 +195,11 @@ def foot():
 def person_ld():
     a = CFG.get("author")
     if not a: return None
-    return {"@type": "Person", "name": a["name"], "url": a["url"],
+    return {"@type": "Person", "@id": "https://www.ninomihilli.com/#person" if "ninomihilli" in a["url"] else a["url"], "name": a["name"], "url": a["url"],
             "jobTitle": a.get("jobTitle", ""), "sameAs": a.get("sameAs", [])}
 
 def org_ld():
-    o = {"@type": "Organization", "name": CFG["name"], "url": CFG["url"] + "/"}
+    o = {"@type": "Organization", "@id": CFG["url"] + "/#org", "name": CFG["name"], "url": CFG["url"] + "/", "logo": CFG["url"] + "/apple-touch-icon.png"}
     if CFG.get("org_sameas"): o["sameAs"] = CFG["org_sameas"]
     if CFG.get("author"): o["founder"] = person_ld()
     return o
