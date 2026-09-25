@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Building software on a nonprofit budget — Xsatori Labs</title>
+<meta name="description" content="Nonprofits get quoted like enterprises and funded like side projects. Here&#x27;s how we scope technology work when every dollar is donated." />
+<link rel="canonical" href="https://xsatorilabs.net/blog/software-on-a-nonprofit-budget/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Building software on a nonprofit budget — Xsatori Labs" />
+<meta property="og:description" content="Nonprofits get quoted like enterprises and funded like side projects. Here&#x27;s how we scope technology work when every dollar is donated." />
+<meta property="og:url" content="https://xsatorilabs.net/blog/software-on-a-nonprofit-budget/" />
+<meta property="og:site_name" content="Xsatori Labs" />
+<meta property="og:image" content="https://xsatorilabs.net/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://xsatorilabs.net/og-image.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="twitter:title" content="Building software on a nonprofit budget — Xsatori Labs" />
+<meta name="twitter:description" content="Nonprofits get quoted like enterprises and funded like side projects. Here&#x27;s how we scope technology work when every dollar is donated." />
+<link rel="alternate" type="application/rss+xml" title="Xsatori Labs — Insights" href="https://xsatorilabs.net/rss.xml" />
+<style>:root{--bg:#0a0b10;--bg2:#0f1119;--ink:#eef0f6;--muted:#9aa0b4;--faint:#6a7086;--line:rgba(255,255,255,.08);--card:rgba(255,255,255,.035);--accent:#7c5cff;--accent2:#31d0c6;--prose:#c9cddb;--serif:ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(880px 520px at 84% -10%, rgba(124,92,255,.16), transparent 60%),radial-gradient(720px 500px at -6% 10%, rgba(49,208,198,.10), transparent 58%);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 26px}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(10,11,16,.76);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1120px;margin:0 auto;padding:0 26px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}
+.logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
+nav .links{display:flex;gap:28px;align-items:center}
+nav .links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+nav .links a:hover{color:var(--ink)}
+nav .links a.on{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;background:linear-gradient(135deg,#7c5cff,#31d0c6);color:#0a0b10;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+@media(max-width:760px){nav .links a:not(.btn){display:none}}
+.phead{padding:74px 0 34px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;display:block}
+h1{font-family:var(--serif);font-size:clamp(30px,5vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.meta{color:var(--faint);font-size:13.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.meta .dot{opacity:.5}
+article{padding:38px 0 20px;font-size:17px}
+article p{margin-bottom:22px;color:var(--prose)}
+article h2{font-family:var(--serif);font-size:clamp(22px,3.4vw,29px);font-weight:700;letter-spacing:-.3px;margin:42px 0 16px}
+article h3{font-size:19px;font-weight:800;margin:30px 0 12px}
+article ul,article ol{margin:0 0 22px 22px;color:var(--prose)}
+article li{margin-bottom:9px}
+article a{color:var(--accent2);border-bottom:1px solid var(--line)}
+article a:hover{border-bottom-color:var(--accent2)}
+article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:0 0 22px;color:var(--muted);font-style:italic}
+article code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14.5px}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article strong{color:var(--ink)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:34px 0 0}
+.tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card)}
+.bio{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:38px 0 0}
+.bio .av{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6)}
+.bio b{font-size:15px}
+.bio p{color:var(--muted);font-size:14px;margin:5px 0 0}
+.bio a{color:var(--accent2)}
+.postlist{padding:14px 0 40px}
+.item{display:block;border-bottom:1px solid var(--line);padding:26px 0;transition:opacity .15s}
+.item:hover{opacity:.82}
+.item .d{font-size:12.5px;color:var(--faint);letter-spacing:.4px;margin-bottom:9px}
+.item h2{font-family:var(--serif);font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.3px;margin-bottom:9px}
+.item p{color:var(--muted);font-size:15px}
+.item .more{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--accent2)}
+.cta{text-align:center;background:linear-gradient(180deg,rgba(124,92,255,.12),transparent);border:1px solid var(--line);border-radius:22px;padding:46px 28px;margin:46px 0}
+.cta h2{font-family:var(--serif);font-size:clamp(23px,3.6vw,31px);font-weight:700;margin-bottom:11px}
+.cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px;max-width:1120px;margin:0 auto;padding:0 26px}
+.foot a{color:var(--muted)} .foot a:hover{color:var(--ink)}
+.backlink{display:inline-block;margin:26px 0 0;font-size:14px;color:var(--muted);font-weight:600}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Building software on a nonprofit budget", "description": "Nonprofits get quoted like enterprises and funded like side projects. Here's how we scope technology work when every dollar is donated.", "datePublished": "2026-09-25", "dateModified": "2026-09-25", "url": "https://xsatorilabs.net/blog/software-on-a-nonprofit-budget/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xsatorilabs.net/blog/software-on-a-nonprofit-budget/"}, "author": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com", "https://t47group.com", "https://xsatorilabs.net"]}, "publisher": {"@type": "Organization", "@id": "https://xsatorilabs.net/#org", "name": "Xsatori Labs", "url": "https://xsatorilabs.net/", "logo": "https://xsatorilabs.net/apple-touch-icon.png", "sameAs": ["https://t47group.com"], "founder": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com", "https://t47group.com", "https://xsatorilabs.net"]}}, "keywords": "Case Study, Nonprofits, Scoping", "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xsatorilabs.net/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://xsatorilabs.net/blog/"}, {"@type": "ListItem", "position": 3, "name": "Building software on a nonprofit budget", "item": "https://xsatorilabs.net/blog/software-on-a-nonprofit-budget/"}]}]}</script>
+</head>
+<body>
+<header><div class="nav">
+  <a class="brand" href="https://xsatorilabs.net/">
+    <div class="logo">XL</div>
+    <div>Xsatori Labs <small>Software Studio</small></div>
+  </a>
+  <nav class="links">
+    <a href="https://xsatorilabs.net/#products">Products</a><a href="https://xsatorilabs.net/#capabilities">Capabilities</a><a href="https://xsatorilabs.net/#about">About</a>
+    <a class="on" href="https://xsatorilabs.net/blog/">Insights</a>
+    <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap phead">
+  <span class="kicker">Case Study</span>
+  <h1>Building software on a nonprofit budget</h1>
+  <div class="meta"><span>Nino Mihilli</span><span class="dot">·</span>
+  <time datetime="2026-09-25">September 25, 2026</time>
+  <span class="dot">·</span><span>4 min read</span></div>
+</div>
+<div class="wrap"><article><p>Nonprofit technology projects fail in a specific way. An organization with a real mission gets a quote sized for a commercial product, cannot fund it, waits, tries again a year later, and repeats. Meanwhile the work the software was supposed to enable does not happen.</p>
+<p>The problem is rarely that the developers were greedy. It is that the project was scoped as if it were a startup with venture funding, when the actual constraint is that every dollar was donated by someone who expects it to go to the mission.</p>
+<h2>Scope to the constraint, not the vision</h2>
+<p>Commercial software gets scoped against opportunity: what could this become, what should we build to be ready. Nonprofit software has to be scoped against a budget that is fixed before the project starts and does not grow because the project got interesting.</p>
+<p>That inverts the process. Instead of asking what the ideal version looks like and pricing it, you ask what this specific amount of money can buy that produces real mission value, and you build exactly that. It is a less satisfying conversation and it produces far more shipped software.</p>
+<h2>The rule: one outcome, not one platform</h2>
+<p>The most expensive mistake is building a platform when the organization needed one outcome.</p>
+<p>A nonprofit rarely needs a system. It needs a specific thing to happen — a person warned, a form submitted, a volunteer matched, a donation processed. Build the narrowest thing that makes that happen. Resist every "while we're in there" instinct, because in a donated-dollar context each of those is money taken from the mission and spent on optionality.</p>
+<h2>Rent almost everything</h2>
+<p>We tell commercial clients to build what is theirs and rent what is everyone's. For nonprofits the ratio shifts hard toward renting.</p>
+<p>Authentication, hosting, payments, email, forms, content management — all of it should be off-the-shelf, and much of it is free or heavily discounted for registered nonprofits, which is a discount many organizations never claim because nobody told them to ask. The custom code should be confined to the part that is genuinely specific to the mission, and that part is usually small.</p>
+<p>A nonprofit that owns 5,000 lines of code it understands is in a much better position than one that owns 80,000 it cannot maintain.</p>
+<h2>Plan for the maintenance nobody funds</h2>
+<p>This is where nonprofit software actually dies. The build gets funded because it is exciting and grant-shaped. The maintenance does not, because it is neither.</p>
+<p>Two years later dependencies are out of date, an integration has changed underneath, nobody has touched it, and it stops working. The organization is back where it started, with the added problem that a system people relied on has failed.</p>
+<p>So the maintenance question has to be answered before the build starts, not after: who keeps this running, what does that cost annually, and where does that money come from? If there is no answer, the correct move is to build something smaller and simpler that can survive neglect — a static site that runs untouched for a decade beats an application that needs quarterly attention nobody is funded to give.</p>
+<h2>What this looks like in practice</h2>
+<p><a href="https://nmwwd.org">NMWWD</a> is a Phoenix road-safety nonprofit working to prevent wrong-way driving. Its core technology is a mobile app that warns drivers of wrong-way risk in real time — currently being rebuilt from the ground up.</p>
+<p>That rebuild decision is the interesting part, and it is the pattern this whole post describes. The right question was not "how do we add features to what exists," it was "what is the smallest, most maintainable version of this that can actually stay running and reach drivers." A safety app that is offline helps nobody, so durability is not a nice-to-have, it is the product requirement.</p>
+<p>Meanwhile the organization's public presence runs on a static site that costs essentially nothing to host and will not break on its own. That is deliberate. Money not spent on infrastructure is money available for the mission.</p>
+<h2>If you run a nonprofit and need software</h2>
+<p>A few things worth knowing:</p>
+<ul><li>Ask every vendor about nonprofit pricing. Most major platforms have it, and most will not volunteer it.</li><li>Insist on owning your accounts, domains, and code. Get it in writing. Organizations get held hostage by vendors more often than you would think.</li><li>Be suspicious of any proposal that does not name an annual maintenance cost. It is not zero, and a proposal that implies it is has not been thought through.</li><li>Build the smallest useful thing and let it prove itself before funding the next piece.</li></ul>
+<p>We do this work at cost or close to it when the mission warrants it. If you are a nonprofit trying to figure out what your technology should actually be, <a href="mailto:hello@xsatorilabs.net">tell us what you're trying to do</a> — and we will tell you honestly if the answer is that you do not need custom software at all.</p></article>
+<div class="tags"><span class="tag">Case Study</span><span class="tag">Nonprofits</span><span class="tag">Scoping</span></div>
+<div class="bio"><div class="av">NM</div>
+        <div><b>Nino Mihilli</b><p>Founder of Xsatori Labs and T47 Group. Twenty years building and scaling businesses, now shipping software for clients out of Phoenix, Arizona. <a href="https://www.ninomihilli.com">www.ninomihilli.com</a></p></div></div>
+<div class="cta"><h2>Have something you need built?</h2><p>Tell us what you're trying to ship and we'll tell you straight whether we're the right studio for it.</p>
+      <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a></div>
+      <a class="backlink" href="https://xsatorilabs.net/blog/">← All insights</a></div>
+</main>
+<footer><div class="foot">
+  <div>© 2026 Xsatori Labs · Phoenix, AZ · Part of the T47 Group family of companies.</div>
+  <div><a href="https://xsatorilabs.net/#products">Products</a> · <a href="https://xsatorilabs.net/blog/">Insights</a> · <a href="https://t47group.com">T47 Group</a> · <a href="mailto:hello@xsatorilabs.net">Contact</a></div>
+</div></footer>
+</body>
+</html>

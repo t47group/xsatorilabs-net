@@ -3,8 +3,13 @@
 <title>Xsatori Labs — Insights</title>
 <link>https://xsatorilabs.net/blog/</link>
 <description>How we scope, price, and ship software — from the team behind Hookah Royale, Flat OS, Xsatori, NMWWD, and Credit4Vets.</description>
-<language>en-us</language><lastBuildDate>Thu, 24 Sep 2026 21:36:59 +0000</lastBuildDate>
-<item><title>What an MVP actually is (and what twelve weeks really buys you)</title>
+<language>en-us</language><lastBuildDate>Fri, 25 Sep 2026 17:41:48 +0000</lastBuildDate>
+<item><title>Building software on a nonprofit budget</title>
+<link>https://xsatorilabs.net/blog/software-on-a-nonprofit-budget/</link>
+<guid isPermaLink="true">https://xsatorilabs.net/blog/software-on-a-nonprofit-budget/</guid>
+<description>Nonprofits get quoted like enterprises and funded like side projects. Here's how we scope technology work when every dollar is donated.</description>
+<pubDate>Fri, 25 Sep 2026 13:00:00 +0000</pubDate>
+</item><item><title>What an MVP actually is (and what twelve weeks really buys you)</title>
 <link>https://xsatorilabs.net/blog/what-an-mvp-actually-is/</link>
 <guid isPermaLink="true">https://xsatorilabs.net/blog/what-an-mvp-actually-is/</guid>
 <description>"Minimum viable product" has been stretched to mean anything. Here's the definition that's actually useful when you're paying for the build.</description>
