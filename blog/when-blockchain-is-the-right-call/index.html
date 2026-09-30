@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>When blockchain is actually the right call — and when it isn&#x27;t — Xsatori Labs</title>
+<meta name="description" content="We build blockchain products. We also talk most people out of them. Here&#x27;s the test we apply." />
+<link rel="canonical" href="https://xsatorilabs.net/blog/when-blockchain-is-the-right-call/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="When blockchain is actually the right call — and when it isn&#x27;t — Xsatori Labs" />
+<meta property="og:description" content="We build blockchain products. We also talk most people out of them. Here&#x27;s the test we apply." />
+<meta property="og:url" content="https://xsatorilabs.net/blog/when-blockchain-is-the-right-call/" />
+<meta property="og:site_name" content="Xsatori Labs" />
+<meta property="og:image" content="https://xsatorilabs.net/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://xsatorilabs.net/og-image.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="twitter:title" content="When blockchain is actually the right call — and when it isn&#x27;t — Xsatori Labs" />
+<meta name="twitter:description" content="We build blockchain products. We also talk most people out of them. Here&#x27;s the test we apply." />
+<link rel="alternate" type="application/rss+xml" title="Xsatori Labs — Insights" href="https://xsatorilabs.net/rss.xml" />
+<style>:root{--bg:#0a0b10;--bg2:#0f1119;--ink:#eef0f6;--muted:#9aa0b4;--faint:#6a7086;--line:rgba(255,255,255,.08);--card:rgba(255,255,255,.035);--accent:#7c5cff;--accent2:#31d0c6;--prose:#c9cddb;--serif:ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(880px 520px at 84% -10%, rgba(124,92,255,.16), transparent 60%),radial-gradient(720px 500px at -6% 10%, rgba(49,208,198,.10), transparent 58%);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 26px}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(10,11,16,.76);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1120px;margin:0 auto;padding:0 26px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}
+.logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
+nav .links{display:flex;gap:28px;align-items:center}
+nav .links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+nav .links a:hover{color:var(--ink)}
+nav .links a.on{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;background:linear-gradient(135deg,#7c5cff,#31d0c6);color:#0a0b10;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+@media(max-width:760px){nav .links a:not(.btn){display:none}}
+.phead{padding:74px 0 34px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;display:block}
+h1{font-family:var(--serif);font-size:clamp(30px,5vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.meta{color:var(--faint);font-size:13.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.meta .dot{opacity:.5}
+article{padding:38px 0 20px;font-size:17px}
+article p{margin-bottom:22px;color:var(--prose)}
+article h2{font-family:var(--serif);font-size:clamp(22px,3.4vw,29px);font-weight:700;letter-spacing:-.3px;margin:42px 0 16px}
+article h3{font-size:19px;font-weight:800;margin:30px 0 12px}
+article ul,article ol{margin:0 0 22px 22px;color:var(--prose)}
+article li{margin-bottom:9px}
+article a{color:var(--accent2);border-bottom:1px solid var(--line)}
+article a:hover{border-bottom-color:var(--accent2)}
+article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:0 0 22px;color:var(--muted);font-style:italic}
+article code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14.5px}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article strong{color:var(--ink)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:34px 0 0}
+.tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card)}
+.bio{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:38px 0 0}
+.bio .av{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6)}
+.bio b{font-size:15px}
+.bio p{color:var(--muted);font-size:14px;margin:5px 0 0}
+.bio a{color:var(--accent2)}
+.postlist{padding:14px 0 40px}
+.item{display:block;border-bottom:1px solid var(--line);padding:26px 0;transition:opacity .15s}
+.item:hover{opacity:.82}
+.item .d{font-size:12.5px;color:var(--faint);letter-spacing:.4px;margin-bottom:9px}
+.item h2{font-family:var(--serif);font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.3px;margin-bottom:9px}
+.item p{color:var(--muted);font-size:15px}
+.item .more{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--accent2)}
+.cta{text-align:center;background:linear-gradient(180deg,rgba(124,92,255,.12),transparent);border:1px solid var(--line);border-radius:22px;padding:46px 28px;margin:46px 0}
+.cta h2{font-family:var(--serif);font-size:clamp(23px,3.6vw,31px);font-weight:700;margin-bottom:11px}
+.cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px;max-width:1120px;margin:0 auto;padding:0 26px}
+.foot a{color:var(--muted)} .foot a:hover{color:var(--ink)}
+.backlink{display:inline-block;margin:26px 0 0;font-size:14px;color:var(--muted);font-weight:600}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "When blockchain is actually the right call — and when it isn't", "description": "We build blockchain products. We also talk most people out of them. Here's the test we apply.", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "url": "https://xsatorilabs.net/blog/when-blockchain-is-the-right-call/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xsatorilabs.net/blog/when-blockchain-is-the-right-call/"}, "author": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com", "https://t47group.com", "https://xsatorilabs.net"]}, "publisher": {"@type": "Organization", "@id": "https://xsatorilabs.net/#org", "name": "Xsatori Labs", "url": "https://xsatorilabs.net/", "logo": "https://xsatorilabs.net/apple-touch-icon.png", "sameAs": ["https://t47group.com"], "founder": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com", "https://t47group.com", "https://xsatorilabs.net"]}}, "keywords": "Blockchain, Architecture, Product Strategy", "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xsatorilabs.net/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://xsatorilabs.net/blog/"}, {"@type": "ListItem", "position": 3, "name": "When blockchain is actually the right call — and when it isn't", "item": "https://xsatorilabs.net/blog/when-blockchain-is-the-right-call/"}]}]}</script>
+</head>
+<body>
+<header><div class="nav">
+  <a class="brand" href="https://xsatorilabs.net/">
+    <div class="logo">XL</div>
+    <div>Xsatori Labs <small>Software Studio</small></div>
+  </a>
+  <nav class="links">
+    <a href="https://xsatorilabs.net/#products">Products</a><a href="https://xsatorilabs.net/#capabilities">Capabilities</a><a href="https://xsatorilabs.net/#about">About</a>
+    <a class="on" href="https://xsatorilabs.net/blog/">Insights</a>
+    <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap phead">
+  <span class="kicker">Architecture</span>
+  <h1>When blockchain is actually the right call — and when it isn&#x27;t</h1>
+  <div class="meta"><span>Nino Mihilli</span><span class="dot">·</span>
+  <time datetime="2026-09-30">September 30, 2026</time>
+  <span class="dot">·</span><span>4 min read</span></div>
+</div>
+<div class="wrap"><article><p>We build blockchain products, so it may be odd to say that most projects proposed to us as blockchain projects should not be. But the sales pitch has run so far ahead of the engineering that plenty of teams arrive having already decided on the technology, without a reason that survives a question.</p>
+<p>Here is the test we actually apply.</p>
+<h2>The one question</h2>
+<p><strong>Who are the parties that do not trust each other, and what specifically would they cheat on?</strong></p>
+<p>That is what this technology is for. It replaces a trusted intermediary with a system where participants who have every reason to lie cannot successfully do so. That is a genuinely hard problem and the machinery is genuinely clever.</p>
+<p>If you cannot name the adversarial parties and the specific thing they would falsify, you do not have that problem. You have a database problem, and a database will be faster, cheaper, easier to change, and simpler to explain to your customers.</p>
+<h2>Where it usually falls apart</h2>
+<p><strong>"For transparency."</strong> You can publish an audit log. You can have it independently attested. Transparency is a policy choice about what you expose, not a consequence of a particular data structure.</p>
+<p><strong>"For immutability."</strong> Append-only storage is a solved problem in ordinary databases. If the concern is that <em>you</em> might alter records, the fix is a system where you cannot — which is a permissions and architecture question, not a chain question.</p>
+<p><strong>"To remove the middleman."</strong> Frequently this replaces one intermediary with several: a chain, a wallet provider, an exchange, a bridge. Count the parties honestly at the end. Sometimes it is fewer. Often it is more, with worse recourse when something breaks.</p>
+<p><strong>"For a supply chain."</strong> The chain guarantees that what was written stays written. It cannot guarantee that what was written was true. If a person scanning a box types the wrong thing, you now have an immutable record of a lie. The hard part of supply-chain verification is the physical-to-digital boundary, and no consensus mechanism touches it.</p>
+<h2>Where it genuinely earns its place</h2>
+<p><strong>Assets that must be transferable without you.</strong> If a user should be able to move something to someone else without your permission, and continue to hold it if your company ceases to exist, that property is very hard to get otherwise.</p>
+<p><strong>Settlement between mutually distrustful parties.</strong> Multiple institutions that need to agree on a ledger and do not want any one of them controlling it. This is the original problem and it remains the best fit.</p>
+<p><strong>Programmatic value transfer with no operator.</strong> Rules that execute on their own, that no party can override — including you. Note that this cuts both ways: no override also means no override when something goes wrong, which is a product decision with real consequences, not a technical footnote.</p>
+<p><strong>Verifiable scarcity that survives you.</strong> If a limited-supply digital thing needs to remain limited even if your servers go away, that guarantee has to live somewhere outside your servers.</p>
+<h2>The costs you inherit</h2>
+<p>Choosing a chain means choosing its constraints, and they are permanent:</p>
+<ul><li><strong>Irreversibility.</strong> Users lose keys. Users send to wrong addresses. Users get phished. There is no support ticket that undoes it, and your support team will spend real time on situations they cannot fix.</li><li><strong>Public data.</strong> Most chains are readable by everyone, forever. Anything approaching personal data needs careful design, and privacy regulation was not written with permanent public ledgers in mind.</li><li><strong>Upgrade friction.</strong> Changing deployed on-chain logic ranges from awkward to impossible. Bugs live longer.</li><li><strong>Onboarding cost.</strong> Wallets, keys, gas, and network switching each cost you users. If your product is aimed beyond a crypto-native audience, this is usually the dominant cost and it is routinely underestimated.</li><li><strong>Regulatory surface.</strong> Depending on what you are moving and for whom, you may have walked into a regulated activity. Get that answer before you build, not after.</li></ul>
+<h2>The hybrid answer</h2>
+<p>The right architecture is frequently hybrid: a conventional application for everything users touch, with a chain used narrowly for the one property that genuinely requires it.</p>
+<p>Custody, settlement, or proof-of-ownership on-chain. Identity, search, messaging, preferences, and every ordinary interaction in a normal database, where they are fast and cheap and fixable. Most of what people imagine as a blockchain product should look like this.</p>
+<h2>How we handle it</h2>
+<p>When someone brings us a blockchain project, we ask the trust question first. If there is a real answer, we build it and we build it carefully, because the mistakes are unusually permanent. If there is not, we say so — and usually the same product ships faster and cheaper without it.</p>
+<p>That has cost us work. It has also meant the blockchain projects we do take on are ones where the technology is load-bearing rather than decorative.</p>
+<p>If you are weighing this for your own product, <a href="mailto:hello@xsatorilabs.net">tell us what you're trying to build</a> and we will give you a straight answer.</p></article>
+<div class="tags"><span class="tag">Blockchain</span><span class="tag">Architecture</span><span class="tag">Product Strategy</span></div>
+<div class="bio"><div class="av">NM</div>
+        <div><b>Nino Mihilli</b><p>Founder of Xsatori Labs and T47 Group. Twenty years building and scaling businesses, now shipping software for clients out of Phoenix, Arizona. <a href="https://www.ninomihilli.com">www.ninomihilli.com</a></p></div></div>
+<div class="cta"><h2>Have something you need built?</h2><p>Tell us what you're trying to ship and we'll tell you straight whether we're the right studio for it.</p>
+      <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a></div>
+      <a class="backlink" href="https://xsatorilabs.net/blog/">← All insights</a></div>
+</main>
+<footer><div class="foot">
+  <div>© 2026 Xsatori Labs · Phoenix, AZ · Part of the T47 Group family of companies.</div>
+  <div><a href="https://xsatorilabs.net/#products">Products</a> · <a href="https://xsatorilabs.net/blog/">Insights</a> · <a href="https://t47group.com">T47 Group</a> · <a href="mailto:hello@xsatorilabs.net">Contact</a></div>
+</div></footer>
+</body>
+</html>
