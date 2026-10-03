@@ -196,7 +196,7 @@ def person_ld():
     a = CFG.get("author")
     if not a: return None
     return {"@type": "Person", "@id": "https://www.ninomihilli.com/#person" if "ninomihilli" in a["url"] else a["url"], "name": a["name"], "url": a["url"],
-            "jobTitle": a.get("jobTitle", ""), "sameAs": a.get("sameAs", [])}
+            "jobTitle": a.get("jobTitle", ""), "sameAs": a.get("sameAs", []), **({"memberOf": a["memberOf"]} if a.get("memberOf") else {})}
 
 def org_ld():
     o = {"@type": "Organization", "@id": CFG["url"] + "/#org", "name": CFG["name"], "url": CFG["url"] + "/", "logo": CFG["url"] + "/apple-touch-icon.png"}
