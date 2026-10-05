@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Why we build our own products as well as yours — Xsatori Labs</title>
+<meta name="description" content="Most studios only ship other people&#x27;s software. Running our own products changes what we know — and what we&#x27;re willing to tell clients." />
+<link rel="canonical" href="https://xsatorilabs.net/blog/why-we-build-our-own-products/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Why we build our own products as well as yours — Xsatori Labs" />
+<meta property="og:description" content="Most studios only ship other people&#x27;s software. Running our own products changes what we know — and what we&#x27;re willing to tell clients." />
+<meta property="og:url" content="https://xsatorilabs.net/blog/why-we-build-our-own-products/" />
+<meta property="og:site_name" content="Xsatori Labs" />
+<meta property="og:image" content="https://xsatorilabs.net/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://xsatorilabs.net/og-image.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="twitter:title" content="Why we build our own products as well as yours — Xsatori Labs" />
+<meta name="twitter:description" content="Most studios only ship other people&#x27;s software. Running our own products changes what we know — and what we&#x27;re willing to tell clients." />
+<link rel="alternate" type="application/rss+xml" title="Xsatori Labs — Insights" href="https://xsatorilabs.net/rss.xml" />
+<style>:root{--bg:#0a0b10;--bg2:#0f1119;--ink:#eef0f6;--muted:#9aa0b4;--faint:#6a7086;--line:rgba(255,255,255,.08);--card:rgba(255,255,255,.035);--accent:#7c5cff;--accent2:#31d0c6;--prose:#c9cddb;--serif:ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(880px 520px at 84% -10%, rgba(124,92,255,.16), transparent 60%),radial-gradient(720px 500px at -6% 10%, rgba(49,208,198,.10), transparent 58%);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 26px}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(10,11,16,.76);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1120px;margin:0 auto;padding:0 26px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}
+.logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
+nav .links{display:flex;gap:28px;align-items:center}
+nav .links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+nav .links a:hover{color:var(--ink)}
+nav .links a.on{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;background:linear-gradient(135deg,#7c5cff,#31d0c6);color:#0a0b10;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+@media(max-width:760px){nav .links a:not(.btn){display:none}}
+.phead{padding:74px 0 34px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;display:block}
+h1{font-family:var(--serif);font-size:clamp(30px,5vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.meta{color:var(--faint);font-size:13.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.meta .dot{opacity:.5}
+article{padding:38px 0 20px;font-size:17px}
+article p{margin-bottom:22px;color:var(--prose)}
+article h2{font-family:var(--serif);font-size:clamp(22px,3.4vw,29px);font-weight:700;letter-spacing:-.3px;margin:42px 0 16px}
+article h3{font-size:19px;font-weight:800;margin:30px 0 12px}
+article ul,article ol{margin:0 0 22px 22px;color:var(--prose)}
+article li{margin-bottom:9px}
+article a{color:var(--accent2);border-bottom:1px solid var(--line)}
+article a:hover{border-bottom-color:var(--accent2)}
+article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:0 0 22px;color:var(--muted);font-style:italic}
+article code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14.5px}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article strong{color:var(--ink)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:34px 0 0}
+.tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card)}
+.bio{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:38px 0 0}
+.bio .av{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6)}
+.bio b{font-size:15px}
+.bio p{color:var(--muted);font-size:14px;margin:5px 0 0}
+.bio a{color:var(--accent2)}
+.postlist{padding:14px 0 40px}
+.item{display:block;border-bottom:1px solid var(--line);padding:26px 0;transition:opacity .15s}
+.item:hover{opacity:.82}
+.item .d{font-size:12.5px;color:var(--faint);letter-spacing:.4px;margin-bottom:9px}
+.item h2{font-family:var(--serif);font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.3px;margin-bottom:9px}
+.item p{color:var(--muted);font-size:15px}
+.item .more{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--accent2)}
+.cta{text-align:center;background:linear-gradient(180deg,rgba(124,92,255,.12),transparent);border:1px solid var(--line);border-radius:22px;padding:46px 28px;margin:46px 0}
+.cta h2{font-family:var(--serif);font-size:clamp(23px,3.6vw,31px);font-weight:700;margin-bottom:11px}
+.cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px;max-width:1120px;margin:0 auto;padding:0 26px}
+.foot a{color:var(--muted)} .foot a:hover{color:var(--ink)}
+.backlink{display:inline-block;margin:26px 0 0;font-size:14px;color:var(--muted);font-weight:600}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Why we build our own products as well as yours", "description": "Most studios only ship other people's software. Running our own products changes what we know — and what we're willing to tell clients.", "datePublished": "2026-10-05", "dateModified": "2026-10-05", "url": "https://xsatorilabs.net/blog/why-we-build-our-own-products/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xsatorilabs.net/blog/why-we-build-our-own-products/"}, "author": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}, "publisher": {"@type": "Organization", "@id": "https://xsatorilabs.net/#org", "name": "Xsatori Labs", "url": "https://xsatorilabs.net/", "logo": "https://xsatorilabs.net/apple-touch-icon.png", "sameAs": ["https://t47group.com"], "founder": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}}, "keywords": "How We Work, Product Strategy", "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xsatorilabs.net/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://xsatorilabs.net/blog/"}, {"@type": "ListItem", "position": 3, "name": "Why we build our own products as well as yours", "item": "https://xsatorilabs.net/blog/why-we-build-our-own-products/"}]}]}</script>
+</head>
+<body>
+<header><div class="nav">
+  <a class="brand" href="https://xsatorilabs.net/">
+    <div class="logo">XL</div>
+    <div>Xsatori Labs <small>Software Studio</small></div>
+  </a>
+  <nav class="links">
+    <a href="https://xsatorilabs.net/#products">Products</a><a href="https://xsatorilabs.net/#capabilities">Capabilities</a><a href="https://xsatorilabs.net/#about">About</a>
+    <a class="on" href="https://xsatorilabs.net/blog/">Insights</a>
+    <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap phead">
+  <span class="kicker">How We Work</span>
+  <h1>Why we build our own products as well as yours</h1>
+  <div class="meta"><span>Nino Mihilli</span><span class="dot">·</span>
+  <time datetime="2026-10-05">October 5, 2026</time>
+  <span class="dot">·</span><span>3 min read</span></div>
+</div>
+<div class="wrap"><article><p>Most software studios build exclusively for clients. It is a clean business: scope, build, deliver, invoice, move on.</p>
+<p>We do that, and we also build and operate our own products. That is unusual enough that clients ask about it, usually with a reasonable underlying question — <em>does this mean my project competes for attention?</em></p>
+<p>Fair question. Here is the honest answer, including the tradeoff.</p>
+<h2>What you learn only by living with it</h2>
+<p>A studio that ships and moves on learns a great deal about building software and almost nothing about <em>owning</em> it.</p>
+<p>The lessons that change how you design things arrive in year two. The clever abstraction that turned out to be a maintenance burden. The infrastructure choice that was cheap at launch and expensive at scale. The admin panel you underbuilt and now your team fights daily. The dependency that stopped being maintained.</p>
+<p>When you hand a project off at launch, none of that reaches you. The client absorbs it, and if they mention it at all it is a year later when you have already made the same decision on three other projects.</p>
+<p>Running our own products means we eat it. <a href="https://hookahroyale.com">Hookah Royale</a> has real players on real networks at 11pm. When the reconnect logic is wrong, we find out. That knowledge goes straight into what we build for clients — not as theory but as scar tissue.</p>
+<h2>What it lets us say no to</h2>
+<p>The more useful effect is on what we are willing to tell clients.</p>
+<p>A studio whose entire revenue is billable hours has a structural incentive to agree that you need the thing you asked for. Nobody sets out to be that studio. It just happens, gradually, when saying "you don't need this" costs you money every time.</p>
+<p>Operating our own products gives us a second thing to be busy with, which makes it much easier to tell a client that their scope is too large, that they should buy instead of build, or that the right move is a landing page and forty phone calls rather than a twelve-week build. We give that advice regularly. It costs us work and it is the most valuable thing we do.</p>
+<h2>The tradeoff, stated plainly</h2>
+<p>The real cost is attention. A studio splitting focus between client work and its own products can do both badly — and clients are right to worry about it.</p>
+<p>The way we handle it is boring: client work has committed timelines and named people, and internal products get the remainder. When those conflict, client commitments win, because a missed client deadline damages a relationship and a slipped internal feature damages a roadmap only we can see.</p>
+<p>That is a choice we have to keep making rather than one we made once. We would rather say that than claim there is no tension.</p>
+<h2>What it means for a client project</h2>
+<p>Practically, three things:</p>
+<p><strong>We have opinions and we will share them.</strong> You are hiring people who have made these decisions with their own money on the line, which produces stronger and occasionally less comfortable opinions than a team optimizing for scope agreement.</p>
+<p><strong>We think about year two.</strong> Maintenance cost, operational burden, and what happens when the person who built it is gone are part of the design conversation, not an afterthought — because we live in year two on our own products.</p>
+<p><strong>We will sometimes tell you not to build.</strong> Including when it costs us the project.</p>
+<h2>The portfolio in practice</h2>
+<p>We have built across the range: real-time consumer gaming, internal operations software, marketplace and exchange mechanics, and nonprofit technology on nonprofit budgets. Some of that work is ours and some belongs to clients, and the useful part is that the lessons move between them.</p>
+<p>The client project that benefits most from Hookah Royale is not another card game. It is the next product where someone's connection drops at the worst moment, and we already know what that costs to get wrong.</p>
+<p>If you want to work with a studio that will argue with your scope, <a href="mailto:hello@xsatorilabs.net">tell us what you're trying to build</a>.</p></article>
+<div class="tags"><span class="tag">How We Work</span><span class="tag">Product Strategy</span></div>
+<div class="bio"><div class="av">NM</div>
+        <div><b>Nino Mihilli</b><p>Founder of Xsatori Labs and T47 Group. Twenty years building and scaling businesses, now shipping software for clients out of Phoenix, Arizona. <a href="https://www.ninomihilli.com">www.ninomihilli.com</a></p></div></div>
+<div class="cta"><h2>Have something you need built?</h2><p>Tell us what you're trying to ship and we'll tell you straight whether we're the right studio for it.</p>
+      <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a></div>
+      <a class="backlink" href="https://xsatorilabs.net/blog/">← All insights</a></div>
+</main>
+<footer><div class="foot">
+  <div>© 2026 Xsatori Labs · Phoenix, AZ · Part of the T47 Group family of companies.</div>
+  <div><a href="https://xsatorilabs.net/#products">Products</a> · <a href="https://xsatorilabs.net/blog/">Insights</a> · <a href="https://t47group.com">T47 Group</a> · <a href="mailto:hello@xsatorilabs.net">Contact</a></div>
+</div></footer>
+</body>
+</html>
