@@ -4,6 +4,8 @@ on:
   schedule:
     # 13:00 UTC = 06:00 America/Phoenix (Arizona does not observe DST)
     - cron: '0 13 * * *'
+    # Backup run 13:00 Phoenix — catches up if GitHub drops the morning run
+    - cron: '0 20 * * *'
   push:
     branches: [main]
     paths: ['posts/**', 'build.py', 'site.json', '.github/workflows/publish.yml']
@@ -18,7 +20,8 @@ concurrency:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
 
