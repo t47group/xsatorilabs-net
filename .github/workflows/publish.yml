@@ -24,6 +24,8 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - name: Build site
         run: python3 build.py
@@ -39,3 +41,8 @@ jobs:
           git add -A
           git commit -m "Publish scheduled posts ($(date -u +%Y-%m-%d))"
           git push
+
+      - name: Notify Bing (IndexNow) about new posts
+        if: always()
+        continue-on-error: true
+        run: python3 indexnow.py
