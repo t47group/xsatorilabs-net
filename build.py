@@ -97,13 +97,14 @@ header{{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:{
 .brand{{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}}
 .logo{{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:{t['logoink']};background:{t['accentgrad']};box-shadow:{t['logoshadow']}}}
 .brand small{{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}}
-nav .links{{display:flex;gap:28px;align-items:center}}
-nav .links a{{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}}
-nav .links a:hover{{color:var(--ink)}}
-nav .links a.on{{color:var(--ink)}}
+nav.links{{display:flex;gap:28px;align-items:center}}
+nav.links a{{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}}
+nav.links a:hover{{color:var(--ink)}}
+nav.links a.on{{color:var(--ink)}}
+nav.links a.btn,nav.links a.btn:hover{{color:{t['logoink']}}}
 .btn{{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;background:{t['accentgrad']};color:{t['logoink']};transition:transform .15s,box-shadow .15s}}
 .btn:hover{{transform:translateY(-1px);box-shadow:{t['logoshadow']}}}
-@media(max-width:760px){{nav .links a:not(.btn){{display:none}}}}
+@media(max-width:760px){{nav.links a:not(.btn){{display:none}}}}
 .phead{{padding:74px 0 34px;border-bottom:1px solid var(--line)}}
 .kicker{{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;display:block}}
 h1{{font-family:var(--serif);font-size:clamp(30px,5vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}}
