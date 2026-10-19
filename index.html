@@ -51,13 +51,14 @@
   .logo{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-weight:900;font-size:15px;color:#0a0b10;
     background:linear-gradient(135deg,var(--a1),var(--a2));box-shadow:0 6px 20px rgba(124,92,255,.35)}
   .brand small{color:var(--muted);font-weight:600;font-size:12px;letter-spacing:.6px;text-transform:uppercase}
-  nav .links{display:flex;gap:26px;align-items:center}
-  nav .links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
-  nav .links a:hover{color:var(--ink)}
+  nav.links{display:flex;gap:26px;align-items:center}
+  nav.links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+  nav.links a:hover{color:var(--ink)}
+  nav.links a.btn,nav.links a.btn:hover{color:#0a0b10}
   .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:11px;font-weight:700;font-size:14px;
     background:linear-gradient(135deg,var(--a1),var(--a2));color:#0a0b10;transition:transform .15s,box-shadow .15s}
   .btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,92,255,.35)}
-  @media(max-width:640px){nav .links{display:none}}
+  @media(max-width:640px){nav.links{display:none}}
 
   /* hero */
   .hero{padding:110px 0 70px;text-align:center}
@@ -136,6 +137,7 @@
     <nav class="links">
       <a href="#products">Products</a>
       <a href="#about">About</a>
+      <a href="/partners/">Partner With Us</a>
       <a href="#contact">Contact</a>
       <a href="/blog/">Insights</a>
       <a class="btn" href="#contact">Get in touch</a>
@@ -161,7 +163,7 @@
       <div class="sec-head">
         <div class="k">Portfolio</div>
         <h2>What we're building</h2>
-        <p>A growing portfolio of products across gaming, fintech, and enterprise software.</p>
+        <p>A growing portfolio of products across gaming, fintech, social, and enterprise software.</p>
       </div>
       <div class="grid">
 
@@ -179,6 +181,14 @@
           <h3>Xsatori</h3>
           <p>A sports-investing marketplace — trade positions on the games and athletes you follow, with the depth and discipline of a real exchange.</p>
           <span class="link">xsatori.com <span class="arrow">→</span></span>
+        </a>
+
+        <a class="card" href="https://buildmyboo.com" target="_blank" rel="noopener">
+          <span class="tag live">● Live</span>
+          <div class="ic">💘</div>
+          <h3>Build My Boo</h3>
+          <p>A dating app where you design your type with simple sliders, then meet real members ranked by how closely they match. Built as a venture partnership.</p>
+          <span class="link">buildmyboo.com <span class="arrow">→</span></span>
         </a>
 
         <a class="card" href="https://www.flatstaffing.com" target="_blank" rel="noopener">
@@ -235,6 +245,19 @@
     </div>
   </section>
 
+  <section id="partners">
+    <div class="wrap">
+      <div class="contact" style="text-align:left;padding:44px 32px">
+        <div class="sec-head" style="margin-bottom:14px">
+          <div class="k">Venture Partnerships</div>
+          <h2>Have a great idea but not the full budget?</h2>
+        </div>
+        <p style="margin:0 0 22px;max-width:64ch">For the right founders, we build in exchange for a mix of equity and cash instead of a full up-front fee. We have real skin in the game, so we're invested in your launch and your growth, not just the hand-off. Build My Boo was built this way.</p>
+        <a class="btn" href="/partners/">How venture partnerships work <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
   <section id="about">
     <div class="wrap about">
       <div>
@@ -251,7 +274,7 @@
         <div class="row"><span>Founder</span><b><a href="https://www.ninomihilli.com/" style="text-decoration:underline">Nino Mihilli</a></b></div>
         <div class="row"><span>Based in</span><b>Phoenix, AZ</b></div>
         <div class="row"><span>Focus</span><b>Apps · Marketplaces · Blockchain · Internal Software</b></div>
-        <div class="row"><span>Live products</span><b>3 &nbsp;·&nbsp; more in build</b></div>
+        <div class="row"><span>Live products</span><b>4 &nbsp;·&nbsp; more in build</b></div>
       </div>
     </div>
   </section>
@@ -271,6 +294,8 @@
   <div class="wrap foot">
     <div>© 2026 Xsatori Labs LLC · Phoenix, AZ · All rights reserved.</div>
     <div class="fl">
+      <a href="/partners/">Partner With Us</a>
+      <a href="/blog/">Insights</a>
       <a href="mailto:hello@xsatorilabs.net">Contact</a>
     </div>
   </div>

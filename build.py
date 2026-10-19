@@ -287,6 +287,7 @@ f"""<?xml version="1.0" encoding="UTF-8"?>
 
     urls = [(CFG["url"] + "/", "1.0", "weekly"), (CFG["url"] + "/blog/", "0.9", "daily")]
     urls += [(f"{CFG['url']}/blog/{p['slug']}/", "0.8", "monthly") for p in posts]
+    urls += [(CFG["url"] + u, "0.8", "monthly") for u in CFG.get("extra_pages", [])]
     body = "".join(f"<url><loc>{u}</loc><changefreq>{c}</changefreq><priority>{pr}</priority></url>"
                    for u, pr, c in urls)
     open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(

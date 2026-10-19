@@ -13,6 +13,10 @@
       "https://xsatorilabs.net/#capabilities"
     ],
     [
+      "Partner With Us",
+      "https://xsatorilabs.net/partners/"
+    ],
+    [
       "About",
       "https://xsatorilabs.net/#about"
     ]
@@ -22,12 +26,16 @@
   "cta_head": "Have something you need built?",
   "cta_copy": "Tell us what you're trying to ship and we'll tell you straight whether we're the right studio for it.",
   "blog_head": "Notes from the studio.",
-  "blog_desc": "How we scope, price, and ship software — from the team behind Hookah Royale, Flat OS, Xsatori, NMWWD, and Credit4Vets.",
+  "blog_desc": "How we scope, price, and ship software — from the team behind Hookah Royale, Build My Boo, Flat OS, Xsatori, NMWWD, and Credit4Vets.",
   "footer_note": "© 2026 Xsatori Labs · Phoenix, AZ · Part of the T47 Group family of companies.",
   "footer_links": [
     [
       "Products",
       "https://xsatorilabs.net/#products"
+    ],
+    [
+      "Partner With Us",
+      "https://xsatorilabs.net/partners/"
     ],
     [
       "Insights",
@@ -103,5 +111,8 @@
     "accentgrad": "linear-gradient(135deg,#7c5cff,#31d0c6)",
     "logoink": "#0a0b10",
     "logoshadow": "0 10px 30px rgba(124,92,255,.34)"
-  }
+  },
+  "extra_pages": [
+    "/partners/"
+  ]
 }
