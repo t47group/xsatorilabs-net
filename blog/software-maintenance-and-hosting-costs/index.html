@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What software costs after launch: maintenance, hosting, and support — Xsatori Labs</title>
+<meta name="description" content="Software maintenance and hosting costs after launch are never zero. Here is what you will pay for each year and how to budget for it without surprises." />
+<link rel="canonical" href="https://xsatorilabs.net/blog/software-maintenance-and-hosting-costs/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What software costs after launch: maintenance, hosting, and support — Xsatori Labs" />
+<meta property="og:description" content="Software maintenance and hosting costs after launch are never zero. Here is what you will pay for each year and how to budget for it without surprises." />
+<meta property="og:url" content="https://xsatorilabs.net/blog/software-maintenance-and-hosting-costs/" />
+<meta property="og:site_name" content="Xsatori Labs" />
+<meta property="og:image" content="https://xsatorilabs.net/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://xsatorilabs.net/og-image.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="twitter:title" content="What software costs after launch: maintenance, hosting, and support — Xsatori Labs" />
+<meta name="twitter:description" content="Software maintenance and hosting costs after launch are never zero. Here is what you will pay for each year and how to budget for it without surprises." />
+<link rel="alternate" type="application/rss+xml" title="Xsatori Labs — Insights" href="https://xsatorilabs.net/rss.xml" />
+<style>:root{--bg:#0a0b10;--bg2:#0f1119;--ink:#eef0f6;--muted:#9aa0b4;--faint:#6a7086;--line:rgba(255,255,255,.08);--card:rgba(255,255,255,.035);--accent:#7c5cff;--accent2:#31d0c6;--prose:#c9cddb;--serif:ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(880px 520px at 84% -10%, rgba(124,92,255,.16), transparent 60%),radial-gradient(720px 500px at -6% 10%, rgba(49,208,198,.10), transparent 58%);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 26px}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(10,11,16,.76);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1120px;margin:0 auto;padding:0 26px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}
+.logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
+nav.links{display:flex;gap:28px;align-items:center}
+nav.links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+nav.links a:hover{color:var(--ink)}
+nav.links a.on{color:var(--ink)}
+nav.links a.btn,nav.links a.btn:hover{color:#0a0b10}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;background:linear-gradient(135deg,#7c5cff,#31d0c6);color:#0a0b10;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+@media(max-width:760px){nav.links a:not(.btn){display:none}}
+.phead{padding:74px 0 34px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;display:block}
+h1{font-family:var(--serif);font-size:clamp(30px,5vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.meta{color:var(--faint);font-size:13.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.meta .dot{opacity:.5}
+article{padding:38px 0 20px;font-size:17px}
+article p{margin-bottom:22px;color:var(--prose)}
+article h2{font-family:var(--serif);font-size:clamp(22px,3.4vw,29px);font-weight:700;letter-spacing:-.3px;margin:42px 0 16px}
+article h3{font-size:19px;font-weight:800;margin:30px 0 12px}
+article ul,article ol{margin:0 0 22px 22px;color:var(--prose)}
+article li{margin-bottom:9px}
+article a{color:var(--accent2);border-bottom:1px solid var(--line)}
+article a:hover{border-bottom-color:var(--accent2)}
+article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:0 0 22px;color:var(--muted);font-style:italic}
+article code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14.5px}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article strong{color:var(--ink)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:34px 0 0}
+.tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card)}
+.bio{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:38px 0 0}
+.bio .av{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6)}
+.bio b{font-size:15px}
+.bio p{color:var(--muted);font-size:14px;margin:5px 0 0}
+.bio a{color:var(--accent2)}
+.postlist{padding:14px 0 40px}
+.item{display:block;border-bottom:1px solid var(--line);padding:26px 0;transition:opacity .15s}
+.item:hover{opacity:.82}
+.item .d{font-size:12.5px;color:var(--faint);letter-spacing:.4px;margin-bottom:9px}
+.item h2{font-family:var(--serif);font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.3px;margin-bottom:9px}
+.item p{color:var(--muted);font-size:15px}
+.item .more{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--accent2)}
+.cta{text-align:center;background:linear-gradient(180deg,rgba(124,92,255,.12),transparent);border:1px solid var(--line);border-radius:22px;padding:46px 28px;margin:46px 0}
+.cta h2{font-family:var(--serif);font-size:clamp(23px,3.6vw,31px);font-weight:700;margin-bottom:11px}
+.cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px;max-width:1120px;margin:0 auto;padding:0 26px}
+.foot a{color:var(--muted)} .foot a:hover{color:var(--ink)}
+.backlink{display:inline-block;margin:26px 0 0;font-size:14px;color:var(--muted);font-weight:600}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "What software costs after launch: maintenance, hosting, and support", "description": "Software maintenance and hosting costs after launch are never zero. Here is what you will pay for each year and how to budget for it without surprises.", "datePublished": "2026-10-19", "dateModified": "2026-10-19", "url": "https://xsatorilabs.net/blog/software-maintenance-and-hosting-costs/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xsatorilabs.net/blog/software-maintenance-and-hosting-costs/"}, "author": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}, "publisher": {"@type": "Organization", "@id": "https://xsatorilabs.net/#org", "name": "Xsatori Labs", "url": "https://xsatorilabs.net/", "logo": "https://xsatorilabs.net/apple-touch-icon.png", "sameAs": ["https://t47group.com"], "founder": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}}, "keywords": "Budgeting, Maintenance, Hosting", "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xsatorilabs.net/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://xsatorilabs.net/blog/"}, {"@type": "ListItem", "position": 3, "name": "What software costs after launch: maintenance, hosting, and support", "item": "https://xsatorilabs.net/blog/software-maintenance-and-hosting-costs/"}]}]}</script>
+</head>
+<body>
+<header><div class="nav">
+  <a class="brand" href="https://xsatorilabs.net/">
+    <div class="logo">XL</div>
+    <div>Xsatori Labs <small>Software Studio</small></div>
+  </a>
+  <nav class="links">
+    <a href="https://xsatorilabs.net/#products">Products</a><a href="https://xsatorilabs.net/#capabilities">Capabilities</a><a href="https://xsatorilabs.net/#about">About</a>
+    <a class="on" href="https://xsatorilabs.net/blog/">Insights</a>
+    <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap phead">
+  <span class="kicker">Budgeting</span>
+  <h1>What software costs after launch: maintenance, hosting, and support</h1>
+  <div class="meta"><span>Nino Mihilli</span><span class="dot">·</span>
+  <time datetime="2026-10-19">October 19, 2026</time>
+  <span class="dot">·</span><span>3 min read</span></div>
+</div>
+<div class="wrap"><article><p>Launch day feels like the finish line. Financially, it is closer to the start. Custom software keeps costing money as long as people use it, and most of the unpleasant surprises we hear about come from businesses that budgeted for the build and nothing after.</p>
+<p>None of this is a reason not to build. It is a reason to know the number before you commit.</p>
+<h2>Hosting and services</h2>
+<p>Your application runs on servers somewhere, and someone bills for them monthly. For most business software, the bill is made up of several smaller pieces:</p>
+<ul><li><strong>Hosting</strong> for the application itself.</li><li><strong>A managed database</strong>, plus backups.</li><li><strong>File storage</strong> for uploads, documents, and images.</li><li><strong>Email and text messaging</strong> services, often billed per message.</li><li><strong>Third-party APIs</strong> such as maps, address validation, AI models, or identity checks, usually billed by usage.</li><li><strong>Monitoring and error tracking</strong>, so problems get noticed before customers report them.</li><li><strong>Domain names and certificates.</strong></li><li><strong>App store developer accounts</strong>, if you have a mobile app.</li></ul>
+<p>For a small internal tool, this can be modest. For a customer-facing product with real traffic, it grows with usage. The important thing is that the cost scales with your business, so a sudden jump usually means something good happened, or something is misconfigured.</p>
+<h2>Maintenance that keeps the lights on</h2>
+<p>Software sits on top of libraries, frameworks, operating systems, and services that change constantly, whether or not you touch your own code.</p>
+<p>Security patches come out and should be applied. Libraries release new major versions and eventually stop supporting old ones. Payment processors and other integrations retire old API versions on their own schedules. Apple and Google update their requirements every year, and apps that fall behind can be removed from the stores.</p>
+<p>None of this adds features. All of it is required to keep what you have working and safe. A system left alone for two or three years often needs a sizable catch-up project before anyone can safely change it again.</p>
+<h2>Support and small changes</h2>
+<p>Once people use the software every day, they will find bugs, request small changes, and ask how to do things. Someone has to field those requests, fix what is broken, and decide what is worth changing.</p>
+<p>This is usually the largest ongoing line item, and the most variable. A stable internal tool might need a few hours a month. A product that is still finding its fit with customers might need a steady stream of work.</p>
+<h2>Common ways to structure it</h2>
+<p><strong>A monthly retainer.</strong> A set number of hours each month for maintenance, fixes, and small improvements. Predictable for both sides, and it keeps the team who built the system familiar with it.</p>
+<p><strong>Pay as you go.</strong> Hourly work when something comes up. Cheaper in quiet months, but slower to respond, and patches tend to get skipped until they become urgent.</p>
+<p><strong>In-house ownership.</strong> Your own developer or IT person takes over. This works well for larger systems, provided the handoff included documentation and the person has time set aside for it.</p>
+<p>There is no single correct structure. The wrong one is having none, because then maintenance happens only after something breaks.</p>
+<h2>How to budget for it</h2>
+<p>A common rule of thumb in the industry is to set aside a meaningful percentage of the original build cost each year for maintenance and support, on top of hosting. The right figure for you depends on how much the system will change and how critical it is. Ask your studio to estimate it for your specific project, in writing, before the build begins.</p>
+<p>Ways to keep it lower:</p>
+<ul><li><strong>Build less.</strong> Every feature is something to maintain forever.</li><li><strong>Rent common pieces.</strong> Managed services for authentication, payments, and email shift maintenance onto vendors who do it at scale.</li><li><strong>Choose mainstream tools.</strong> Popular frameworks get security fixes quickly and have more people who can work on them.</li><li><strong>Keep it documented.</strong> Documentation makes maintenance faster and makes you less dependent on any one developer.</li></ul>
+<h2>Ask before you sign</h2>
+<p>Any proposal for custom software should include an estimate of annual hosting and service fees and a recommended maintenance arrangement. If it does not, ask. A studio that has thought about your project should be able to answer.</p>
+<p>We think about this on our own products as much as client ones, because we pay their hosting bills too. If you want a realistic picture of the total cost of something you are planning, <a href="mailto:hello@xsatorilabs.net">tell us what you have in mind</a>.</p></article>
+<div class="tags"><span class="tag">Budgeting</span><span class="tag">Maintenance</span><span class="tag">Hosting</span></div>
+<div class="bio"><div class="av">NM</div>
+        <div><b>Nino Mihilli</b><p>Founder of Xsatori Labs and T47 Group. Twenty years building and scaling businesses, now shipping software for clients out of Phoenix, Arizona. <a href="https://www.ninomihilli.com">www.ninomihilli.com</a></p></div></div>
+<div class="cta"><h2>Have something you need built?</h2><p>Tell us what you're trying to ship and we'll tell you straight whether we're the right studio for it.</p>
+      <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a></div>
+      <a class="backlink" href="https://xsatorilabs.net/blog/">← All insights</a></div>
+</main>
+<footer><div class="foot">
+  <div>© 2026 Xsatori Labs · Phoenix, AZ · Part of the T47 Group family of companies.</div>
+  <div><a href="https://xsatorilabs.net/#products">Products</a> · <a href="https://xsatorilabs.net/blog/">Insights</a> · <a href="https://t47group.com">T47 Group</a> · <a href="mailto:hello@xsatorilabs.net">Contact</a></div>
+</div></footer>
+</body>
+</html>

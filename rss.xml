@@ -3,8 +3,13 @@
 <title>Xsatori Labs — Insights</title>
 <link>https://xsatorilabs.net/blog/</link>
 <description>How we scope, price, and ship software — from the team behind Hookah Royale, Flat OS, Xsatori, NMWWD, and Credit4Vets.</description>
-<language>en-us</language><lastBuildDate>Sun, 18 Oct 2026 22:17:51 +0000</lastBuildDate>
-<item><title>Who owns your code? IP, accounts, and source escrow explained</title>
+<language>en-us</language><lastBuildDate>Mon, 19 Oct 2026 18:55:54 +0000</lastBuildDate>
+<item><title>What software costs after launch: maintenance, hosting, and support</title>
+<link>https://xsatorilabs.net/blog/software-maintenance-and-hosting-costs/</link>
+<guid isPermaLink="true">https://xsatorilabs.net/blog/software-maintenance-and-hosting-costs/</guid>
+<description>Software maintenance and hosting costs after launch are never zero. Here is what you will pay for each year and how to budget for it without surprises.</description>
+<pubDate>Mon, 19 Oct 2026 13:00:00 +0000</pubDate>
+</item><item><title>Who owns your code? IP, accounts, and source escrow explained</title>
 <link>https://xsatorilabs.net/blog/owning-your-code-and-source-escrow/</link>
 <guid isPermaLink="true">https://xsatorilabs.net/blog/owning-your-code-and-source-escrow/</guid>
 <description>Who owns your code after a custom software project? A plain guide to IP assignment, account ownership, licenses, and when source code escrow helps.</description>
