@@ -3,8 +3,13 @@
 <title>Xsatori Labs — Insights</title>
 <link>https://xsatorilabs.net/blog/</link>
 <description>How we scope, price, and ship software — from the team behind Hookah Royale, Build My Boo, Flat OS, Xsatori, NMWWD, and Credit4Vets.</description>
-<language>en-us</language><lastBuildDate>Thu, 22 Oct 2026 23:03:40 +0000</lastBuildDate>
-<item><title>Connecting custom software to QuickBooks and legacy systems</title>
+<language>en-us</language><lastBuildDate>Fri, 23 Oct 2026 17:38:29 +0000</lastBuildDate>
+<item><title>Automating staffing and scheduling operations: where to start</title>
+<link>https://xsatorilabs.net/blog/automating-staffing-and-scheduling-operations/</link>
+<guid isPermaLink="true">https://xsatorilabs.net/blog/automating-staffing-and-scheduling-operations/</guid>
+<description>Automating staffing and scheduling operations starts with the right step, not a new platform. Lessons from building Flat OS for a Phoenix staffing agency.</description>
+<pubDate>Fri, 23 Oct 2026 13:00:00 +0000</pubDate>
+</item><item><title>Connecting custom software to QuickBooks and legacy systems</title>
 <link>https://xsatorilabs.net/blog/integrating-quickbooks-and-legacy-systems/</link>
 <guid isPermaLink="true">https://xsatorilabs.net/blog/integrating-quickbooks-and-legacy-systems/</guid>
 <description>Integrating custom software with QuickBooks and legacy systems is where projects often get harder than planned. Here is what to expect and how to scope it.</description>
