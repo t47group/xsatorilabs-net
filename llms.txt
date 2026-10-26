@@ -1,0 +1,33 @@
+# Xsatori Labs
+
+> Xsatori Labs is a B2B and C2C software studio in Phoenix, Arizona, and part of T47 Group. It designs, engineers and launches apps, marketplaces, social platforms, blockchain products, AI automation and internal software hubs. Clients can work with Xsatori Labs on a traditional fee basis, or qualified ventures can apply for a selective venture partnership that combines development fees with equity.
+
+- Parent company: T47 Group (https://t47group.com)
+- Founder: Nino Mihilli (https://www.ninomihilli.com)
+- Location: Phoenix, Arizona
+- Email: hello@xsatorilabs.net
+- Note: Xsatori Labs (xsatorilabs.net) is not affiliated with Satori Labs, Inc. or other similarly named companies.
+
+## Services
+
+- Apps and platforms for web, iOS and Android
+- Two-sided and C2C marketplaces
+- Blockchain products: tokens, smart contracts, wallets
+- Social platforms
+- Internal software hubs that connect CRM, billing, scheduling, payroll and communications
+- Automation and AI workflows
+
+## Products built by Xsatori Labs
+
+- [Hookah Royale](https://hookahroyale.com): Social card-game lounge for web and mobile.
+- [Build My Boo](https://buildmyboo.com): Dating app built as a venture partnership.
+- [RydeHop](https://www.rydehop.com): Seat-sharing ride platform built as a venture partnership.
+- [Flat OS](https://www.flatstaffing.com): Internal operations software for FLAT Staffing, including its GPS time clock.
+- [Xsatori](https://xsatori.com): Sports-investing marketplace.
+- [Pulcie](https://www.pulcie.com): Social app for matching people around shared experiences.
+
+## Pages
+
+- [Home](https://xsatorilabs.net/): What the studio builds, featured work and how to start a project.
+- [Venture Partnerships](https://xsatorilabs.net/partners/): Cash-plus-equity partnerships, how they work, the Build My Boo case study and the application.
+- [Insights](https://xsatorilabs.net/blog/): Articles on software costs, MVPs, marketplaces, build vs. buy and choosing a software studio in Phoenix.
