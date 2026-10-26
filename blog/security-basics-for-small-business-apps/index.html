@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Security basics every small-business app should have — Xsatori Labs</title>
+<meta name="description" content="Security basics for small-business apps that every owner should ask about: logins, permissions, backups, data handling, and who has access to what." />
+<link rel="canonical" href="https://xsatorilabs.net/blog/security-basics-for-small-business-apps/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Security basics every small-business app should have — Xsatori Labs" />
+<meta property="og:description" content="Security basics for small-business apps that every owner should ask about: logins, permissions, backups, data handling, and who has access to what." />
+<meta property="og:url" content="https://xsatorilabs.net/blog/security-basics-for-small-business-apps/" />
+<meta property="og:site_name" content="Xsatori Labs" />
+<meta property="og:image" content="https://xsatorilabs.net/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://xsatorilabs.net/og-image.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="twitter:title" content="Security basics every small-business app should have — Xsatori Labs" />
+<meta name="twitter:description" content="Security basics for small-business apps that every owner should ask about: logins, permissions, backups, data handling, and who has access to what." />
+<link rel="alternate" type="application/rss+xml" title="Xsatori Labs — Insights" href="https://xsatorilabs.net/rss.xml" />
+<style>:root{--bg:#0a0b10;--bg2:#0f1119;--ink:#eef0f6;--muted:#9aa0b4;--faint:#6a7086;--line:rgba(255,255,255,.08);--card:rgba(255,255,255,.035);--accent:#7c5cff;--accent2:#31d0c6;--prose:#c9cddb;--serif:ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(880px 520px at 84% -10%, rgba(124,92,255,.16), transparent 60%),radial-gradient(720px 500px at -6% 10%, rgba(49,208,198,.10), transparent 58%);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 26px}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(10,11,16,.76);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1120px;margin:0 auto;padding:0 26px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}
+.logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
+nav.links{display:flex;gap:28px;align-items:center}
+nav.links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+nav.links a:hover{color:var(--ink)}
+nav.links a.on{color:var(--ink)}
+nav.links a.btn,nav.links a.btn:hover{color:#0a0b10}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;background:linear-gradient(135deg,#7c5cff,#31d0c6);color:#0a0b10;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+@media(max-width:760px){nav.links a:not(.btn){display:none}}
+.phead{padding:74px 0 34px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;display:block}
+h1{font-family:var(--serif);font-size:clamp(30px,5vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.meta{color:var(--faint);font-size:13.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.meta .dot{opacity:.5}
+article{padding:38px 0 20px;font-size:17px}
+article p{margin-bottom:22px;color:var(--prose)}
+article h2{font-family:var(--serif);font-size:clamp(22px,3.4vw,29px);font-weight:700;letter-spacing:-.3px;margin:42px 0 16px}
+article h3{font-size:19px;font-weight:800;margin:30px 0 12px}
+article ul,article ol{margin:0 0 22px 22px;color:var(--prose)}
+article li{margin-bottom:9px}
+article a{color:var(--accent2);border-bottom:1px solid var(--line)}
+article a:hover{border-bottom-color:var(--accent2)}
+article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:0 0 22px;color:var(--muted);font-style:italic}
+article code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14.5px}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article strong{color:var(--ink)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:34px 0 0}
+.tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card)}
+.bio{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:38px 0 0}
+.bio .av{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6)}
+.bio b{font-size:15px}
+.bio p{color:var(--muted);font-size:14px;margin:5px 0 0}
+.bio a{color:var(--accent2)}
+.postlist{padding:14px 0 40px}
+.item{display:block;border-bottom:1px solid var(--line);padding:26px 0;transition:opacity .15s}
+.item:hover{opacity:.82}
+.item .d{font-size:12.5px;color:var(--faint);letter-spacing:.4px;margin-bottom:9px}
+.item h2{font-family:var(--serif);font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.3px;margin-bottom:9px}
+.item p{color:var(--muted);font-size:15px}
+.item .more{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--accent2)}
+.cta{text-align:center;background:linear-gradient(180deg,rgba(124,92,255,.12),transparent);border:1px solid var(--line);border-radius:22px;padding:46px 28px;margin:46px 0}
+.cta h2{font-family:var(--serif);font-size:clamp(23px,3.6vw,31px);font-weight:700;margin-bottom:11px}
+.cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px;max-width:1120px;margin:0 auto;padding:0 26px}
+.foot a{color:var(--muted)} .foot a:hover{color:var(--ink)}
+.backlink{display:inline-block;margin:26px 0 0;font-size:14px;color:var(--muted);font-weight:600}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Security basics every small-business app should have", "description": "Security basics for small-business apps that every owner should ask about: logins, permissions, backups, data handling, and who has access to what.", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "url": "https://xsatorilabs.net/blog/security-basics-for-small-business-apps/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xsatorilabs.net/blog/security-basics-for-small-business-apps/"}, "author": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}, "publisher": {"@type": "Organization", "@id": "https://xsatorilabs.net/#org", "name": "Xsatori Labs", "url": "https://xsatorilabs.net/", "logo": "https://xsatorilabs.net/apple-touch-icon.png", "sameAs": ["https://t47group.com"], "founder": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}}, "keywords": "Security, Small Business, Internal Tools", "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xsatorilabs.net/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://xsatorilabs.net/blog/"}, {"@type": "ListItem", "position": 3, "name": "Security basics every small-business app should have", "item": "https://xsatorilabs.net/blog/security-basics-for-small-business-apps/"}]}]}</script>
+</head>
+<body>
+<header><div class="nav">
+  <a class="brand" href="https://xsatorilabs.net/">
+    <div class="logo">XL</div>
+    <div>Xsatori Labs <small>Software Studio</small></div>
+  </a>
+  <nav class="links">
+    <a href="https://xsatorilabs.net/#products">Products</a><a href="https://xsatorilabs.net/#capabilities">Capabilities</a><a href="https://xsatorilabs.net/partners/">Venture Partnerships</a><a href="https://xsatorilabs.net/#about">About</a>
+    <a class="on" href="https://xsatorilabs.net/blog/">Insights</a>
+    <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap phead">
+  <span class="kicker">Security</span>
+  <h1>Security basics every small-business app should have</h1>
+  <div class="meta"><span>Nino Mihilli</span><span class="dot">·</span>
+  <time datetime="2026-10-26">October 26, 2026</time>
+  <span class="dot">·</span><span>3 min read</span></div>
+</div>
+<div class="wrap"><article><p>Small businesses are often told they are too small to be targets. In practice, most attacks are not aimed at anyone in particular. Automated tools scan the internet for weak passwords, outdated software, and exposed data, and they find small businesses because small businesses are less likely to have someone checking.</p>
+<p>You do not need an enterprise security program to build safe software. You need a short list of fundamentals done consistently. These are the ones we expect in every application we build, and the ones we would ask about if we were hiring a studio.</p>
+<h2>Logins</h2>
+<p><strong>Use a proven authentication service.</strong> Login, password reset, and session handling are easy to get subtly wrong. Established services and libraries have already absorbed years of attacks. A studio writing its own password system from scratch should have a very good reason.</p>
+<p><strong>Offer two-factor authentication</strong>, and require it for anyone with admin access. Most account takeovers start with a reused password.</p>
+<p><strong>Support single sign-on for staff</strong> if your team already uses Google Workspace or Microsoft 365. It means one place to remove access when someone leaves.</p>
+<h2>Permissions</h2>
+<p>Every user should be able to see and do only what their job requires. A field worker does not need billing data. A client should never see another client's records.</p>
+<p>This sounds obvious, and it is one of the most common gaps in custom software. The check has to happen on the server, for every request, not only by hiding buttons in the interface. Ask your developers how access is enforced and how they test it.</p>
+<h2>Data in transit and at rest</h2>
+<p>All traffic should use HTTPS. This is standard now, but it should cover every endpoint, including the admin tools and the API the mobile app talks to.</p>
+<p>Sensitive data — Social Security numbers, bank details, health information, identity documents — should be encrypted where it is stored, and ideally not stored at all if you can avoid it. The safest data is the data you never kept. If a payment processor can hold card numbers for you, let it.</p>
+<h2>Secrets and keys</h2>
+<p>Passwords for databases and API keys for outside services should never be written into the code or shared in chat messages. They belong in a secrets manager or the hosting platform's environment settings, with access limited to the people who need it.</p>
+<p>When someone with access leaves, rotate the keys they could see.</p>
+<h2>Updates</h2>
+<p>Most real-world breaches exploit known problems that already had a fix available. Libraries and frameworks need regular updates, and the hosting platform needs to be kept current. This is one of the reasons maintenance is an ongoing cost rather than an optional one.</p>
+<h2>Backups you have tested</h2>
+<p>Backups should run automatically, be stored separately from the main system, and — the part that gets skipped — be restored on a test basis now and then. A backup nobody has ever restored is a hope, not a plan.</p>
+<h2>Logging and alerts</h2>
+<p>The system should record logins, permission changes, exports, and other sensitive actions, along with who did them. Someone should be alerted to unusual activity, like many failed logins or a large export at 3am. Without logs, you cannot answer the first question after an incident: what happened?</p>
+<h2>Accounts and people</h2>
+<p>Most of security is administrative. Keep accounts in your business's name. Remove access promptly when staff or contractors leave. Give your developers the access they need for the project and no more. Know who has admin rights to your hosting, domain, and code.</p>
+<h2>Industry rules</h2>
+<p>Some data comes with legal obligations. Health information, payment card data, financial records, and information about minors each carry specific requirements. If your software touches any of these, raise it at the start of the project, because it affects design decisions that are expensive to change later.</p>
+<h2>What to ask a studio</h2>
+<ol><li>Which authentication service do you use, and is two-factor supported?</li><li>How are permissions enforced and tested?</li><li>Where are secrets stored, and who can see them?</li><li>How often are dependencies updated, and who is responsible after launch?</li><li>How are backups tested?</li><li>What gets logged, and who gets alerted?</li></ol>
+<p>These questions shape our designs from the first week, whether the project is a consumer app or internal software for a nonprofit like Credit4Vets. If you want a second set of eyes on an app you already have or one you are planning, <a href="mailto:hello@xsatorilabs.net">reach out</a>.</p></article>
+<div class="tags"><span class="tag">Security</span><span class="tag">Small Business</span><span class="tag">Internal Tools</span></div>
+<div class="bio"><div class="av">NM</div>
+        <div><b>Nino Mihilli</b><p>Founder of Xsatori Labs and T47 Group. Twenty years building and scaling businesses, now shipping software for clients out of Phoenix, Arizona. <a href="https://www.ninomihilli.com">www.ninomihilli.com</a></p></div></div>
+<div class="cta"><h2>Have something you need built?</h2><p>Tell us what you're trying to ship and we'll tell you straight whether we're the right studio for it.</p>
+      <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a></div>
+      <a class="backlink" href="https://xsatorilabs.net/blog/">← All insights</a></div>
+</main>
+<footer><div class="foot">
+  <div>© 2026 Xsatori Labs · Phoenix, AZ · Part of the T47 Group family of companies.</div>
+  <div><a href="https://xsatorilabs.net/#products">Products</a> · <a href="https://xsatorilabs.net/partners/">Venture Partnerships</a> · <a href="https://xsatorilabs.net/blog/">Insights</a> · <a href="https://t47group.com">T47 Group</a> · <a href="mailto:hello@xsatorilabs.net">Contact</a></div>
+</div></footer>
+</body>
+</html>

@@ -3,8 +3,13 @@
 <title>Xsatori Labs — Insights</title>
 <link>https://xsatorilabs.net/blog/</link>
 <description>How we scope, price, and ship software — from the team behind Hookah Royale, Build My Boo, Flat OS, Xsatori, NMWWD, and Credit4Vets.</description>
-<language>en-us</language><lastBuildDate>Sun, 25 Oct 2026 22:22:32 +0000</lastBuildDate>
-<item><title>Automating staffing and scheduling operations: where to start</title>
+<language>en-us</language><lastBuildDate>Mon, 26 Oct 2026 18:58:31 +0000</lastBuildDate>
+<item><title>Security basics every small-business app should have</title>
+<link>https://xsatorilabs.net/blog/security-basics-for-small-business-apps/</link>
+<guid isPermaLink="true">https://xsatorilabs.net/blog/security-basics-for-small-business-apps/</guid>
+<description>Security basics for small-business apps that every owner should ask about: logins, permissions, backups, data handling, and who has access to what.</description>
+<pubDate>Mon, 26 Oct 2026 13:00:00 +0000</pubDate>
+</item><item><title>Automating staffing and scheduling operations: where to start</title>
 <link>https://xsatorilabs.net/blog/automating-staffing-and-scheduling-operations/</link>
 <guid isPermaLink="true">https://xsatorilabs.net/blog/automating-staffing-and-scheduling-operations/</guid>
 <description>Automating staffing and scheduling operations starts with the right step, not a new platform. Lessons from building Flat OS for a Phoenix staffing agency.</description>
