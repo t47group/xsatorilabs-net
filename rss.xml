@@ -3,8 +3,13 @@
 <title>Xsatori Labs — Insights</title>
 <link>https://xsatorilabs.net/blog/</link>
 <description>How we scope, price, and ship software — from the team behind Hookah Royale, Build My Boo, Flat OS, Xsatori, NMWWD, and Credit4Vets.</description>
-<language>en-us</language><lastBuildDate>Tue, 27 Oct 2026 23:38:10 +0000</lastBuildDate>
-<item><title>Security basics every small-business app should have</title>
+<language>en-us</language><lastBuildDate>Wed, 28 Oct 2026 18:35:53 +0000</lastBuildDate>
+<item><title>Eight signs your software project is going off the rails</title>
+<link>https://xsatorilabs.net/blog/signs-your-software-project-is-off-track/</link>
+<guid isPermaLink="true">https://xsatorilabs.net/blog/signs-your-software-project-is-off-track/</guid>
+<description>The early warning signs your software project is going off track, what each one usually means, and what to do before a small slip becomes a failed build.</description>
+<pubDate>Wed, 28 Oct 2026 13:00:00 +0000</pubDate>
+</item><item><title>Security basics every small-business app should have</title>
 <link>https://xsatorilabs.net/blog/security-basics-for-small-business-apps/</link>
 <guid isPermaLink="true">https://xsatorilabs.net/blog/security-basics-for-small-business-apps/</guid>
 <description>Security basics for small-business apps that every owner should ask about: logins, permissions, backups, data handling, and who has access to what.</description>
