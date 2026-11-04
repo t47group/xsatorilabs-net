@@ -3,8 +3,13 @@
 <title>Xsatori Labs — Insights</title>
 <link>https://xsatorilabs.net/blog/</link>
 <description>How we scope, price, and ship software — from the team behind Hookah Royale, Build My Boo, Flat OS, Xsatori, NMWWD, and Credit4Vets.</description>
-<language>en-us</language><lastBuildDate>Tue, 03 Nov 2026 19:54:57 +0000</lastBuildDate>
-<item><title>Building Xsatori: pricing a sports market with an AMM</title>
+<language>en-us</language><lastBuildDate>Wed, 04 Nov 2026 00:28:39 +0000</lastBuildDate>
+<item><title>Is your website or app accessible? What the ADA means for business software</title>
+<link>https://xsatorilabs.net/blog/web-accessibility-for-business-apps/</link>
+<guid isPermaLink="true">https://xsatorilabs.net/blog/web-accessibility-for-business-apps/</guid>
+<description>What the ADA means for your business website and app, which accessibility standards matter, and how to build accessibility in without an expensive retrofit.</description>
+<pubDate>Wed, 04 Nov 2026 13:00:00 +0000</pubDate>
+</item><item><title>Building Xsatori: pricing a sports market with an AMM</title>
 <link>https://xsatorilabs.net/blog/building-xsatori-amm-sports-exchange/</link>
 <guid isPermaLink="true">https://xsatorilabs.net/blog/building-xsatori-amm-sports-exchange/</guid>
 <description>A case study in building a sports market exchange with an automated market maker, and what custom pricing engines teach about financial software design.</description>

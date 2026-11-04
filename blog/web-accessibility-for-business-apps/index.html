@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Is your website or app accessible? What the ADA means for business software — Xsatori Labs</title>
+<meta name="description" content="What the ADA means for your business website and app, which accessibility standards matter, and how to build accessibility in without an expensive retrofit." />
+<link rel="canonical" href="https://xsatorilabs.net/blog/web-accessibility-for-business-apps/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Is your website or app accessible? What the ADA means for business software — Xsatori Labs" />
+<meta property="og:description" content="What the ADA means for your business website and app, which accessibility standards matter, and how to build accessibility in without an expensive retrofit." />
+<meta property="og:url" content="https://xsatorilabs.net/blog/web-accessibility-for-business-apps/" />
+<meta property="og:site_name" content="Xsatori Labs" />
+<meta property="og:image" content="https://xsatorilabs.net/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://xsatorilabs.net/og-image.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="twitter:title" content="Is your website or app accessible? What the ADA means for business software — Xsatori Labs" />
+<meta name="twitter:description" content="What the ADA means for your business website and app, which accessibility standards matter, and how to build accessibility in without an expensive retrofit." />
+<link rel="alternate" type="application/rss+xml" title="Xsatori Labs — Insights" href="https://xsatorilabs.net/rss.xml" />
+<style>:root{--bg:#0a0b10;--bg2:#0f1119;--ink:#eef0f6;--muted:#9aa0b4;--faint:#6a7086;--line:rgba(255,255,255,.08);--card:rgba(255,255,255,.035);--accent:#7c5cff;--accent2:#31d0c6;--prose:#c9cddb;--serif:ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(880px 520px at 84% -10%, rgba(124,92,255,.16), transparent 60%),radial-gradient(720px 500px at -6% 10%, rgba(49,208,198,.10), transparent 58%);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 26px}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(10,11,16,.76);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1120px;margin:0 auto;padding:0 26px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}
+.logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
+nav.links{display:flex;gap:28px;align-items:center}
+nav.links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+nav.links a:hover{color:var(--ink)}
+nav.links a.on{color:var(--ink)}
+nav.links a.btn,nav.links a.btn:hover{color:#0a0b10}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;background:linear-gradient(135deg,#7c5cff,#31d0c6);color:#0a0b10;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+@media(max-width:760px){nav.links a:not(.btn){display:none}}
+.phead{padding:74px 0 34px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;display:block}
+h1{font-family:var(--serif);font-size:clamp(30px,5vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.meta{color:var(--faint);font-size:13.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.meta .dot{opacity:.5}
+article{padding:38px 0 20px;font-size:17px}
+article p{margin-bottom:22px;color:var(--prose)}
+article h2{font-family:var(--serif);font-size:clamp(22px,3.4vw,29px);font-weight:700;letter-spacing:-.3px;margin:42px 0 16px}
+article h3{font-size:19px;font-weight:800;margin:30px 0 12px}
+article ul,article ol{margin:0 0 22px 22px;color:var(--prose)}
+article li{margin-bottom:9px}
+article a{color:var(--accent2);border-bottom:1px solid var(--line)}
+article a:hover{border-bottom-color:var(--accent2)}
+article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:0 0 22px;color:var(--muted);font-style:italic}
+article code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14.5px}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article strong{color:var(--ink)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:34px 0 0}
+.tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card)}
+.bio{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:38px 0 0}
+.bio .av{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6)}
+.bio b{font-size:15px}
+.bio p{color:var(--muted);font-size:14px;margin:5px 0 0}
+.bio a{color:var(--accent2)}
+.postlist{padding:14px 0 40px}
+.item{display:block;border-bottom:1px solid var(--line);padding:26px 0;transition:opacity .15s}
+.item:hover{opacity:.82}
+.item .d{font-size:12.5px;color:var(--faint);letter-spacing:.4px;margin-bottom:9px}
+.item h2{font-family:var(--serif);font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.3px;margin-bottom:9px}
+.item p{color:var(--muted);font-size:15px}
+.item .more{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--accent2)}
+.cta{text-align:center;background:linear-gradient(180deg,rgba(124,92,255,.12),transparent);border:1px solid var(--line);border-radius:22px;padding:46px 28px;margin:46px 0}
+.cta h2{font-family:var(--serif);font-size:clamp(23px,3.6vw,31px);font-weight:700;margin-bottom:11px}
+.cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px;max-width:1120px;margin:0 auto;padding:0 26px}
+.foot a{color:var(--muted)} .foot a:hover{color:var(--ink)}
+.backlink{display:inline-block;margin:26px 0 0;font-size:14px;color:var(--muted);font-weight:600}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Is your website or app accessible? What the ADA means for business software", "description": "What the ADA means for your business website and app, which accessibility standards matter, and how to build accessibility in without an expensive retrofit.", "datePublished": "2026-11-04", "dateModified": "2026-11-04", "url": "https://xsatorilabs.net/blog/web-accessibility-for-business-apps/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xsatorilabs.net/blog/web-accessibility-for-business-apps/"}, "author": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}, "publisher": {"@type": "Organization", "@id": "https://xsatorilabs.net/#org", "name": "Xsatori Labs", "url": "https://xsatorilabs.net/", "logo": "https://xsatorilabs.net/apple-touch-icon.png", "sameAs": ["https://t47group.com"], "founder": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}}, "keywords": "Accessibility, Compliance, Web Apps", "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xsatorilabs.net/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://xsatorilabs.net/blog/"}, {"@type": "ListItem", "position": 3, "name": "Is your website or app accessible? What the ADA means for business software", "item": "https://xsatorilabs.net/blog/web-accessibility-for-business-apps/"}]}]}</script>
+</head>
+<body>
+<header><div class="nav">
+  <a class="brand" href="https://xsatorilabs.net/">
+    <div class="logo">XL</div>
+    <div>Xsatori Labs <small>Software Studio</small></div>
+  </a>
+  <nav class="links">
+    <a href="https://xsatorilabs.net/#products">Products</a><a href="https://xsatorilabs.net/#capabilities">Capabilities</a><a href="https://xsatorilabs.net/partners/">Venture Partnerships</a><a href="https://xsatorilabs.net/#about">About</a>
+    <a class="on" href="https://xsatorilabs.net/blog/">Insights</a>
+    <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap phead">
+  <span class="kicker">Accessibility</span>
+  <h1>Is your website or app accessible? What the ADA means for business software</h1>
+  <div class="meta"><span>Nino Mihilli</span><span class="dot">·</span>
+  <time datetime="2026-11-04">November 4, 2026</time>
+  <span class="dot">·</span><span>5 min read</span></div>
+</div>
+<div class="wrap"><article><p>Accessibility tends to come up in one of two ways. Either someone on the team asks about it early, or a customer complains that they cannot finish a form, book an appointment, or read a page. The first way is much cheaper.</p>
+<p>This post is not legal advice. It is a plain-English look at what the rules say, what "accessible" actually means in software, and how we build it into projects from the start. If you have a specific legal question, talk to an attorney who handles ADA matters.</p>
+<h2>What the ADA says about websites</h2>
+<p>The Americans with Disabilities Act was written before most businesses had websites, but the U.S. Department of Justice has been clear that it reaches online services. In its <a href="https://www.ada.gov/resources/web-guidance/">guidance on web accessibility</a>, the Department says businesses open to the public must provide equal access to their goods and services, including those offered online.</p>
+<p>Two points in that guidance matter for planning:</p>
+<ul><li><strong>There is no detailed federal web standard for private businesses.</strong> The Department notes that businesses have flexibility in how they comply, but they still have to comply.</li><li><strong>Existing technical standards are the practical yardstick.</strong> The guidance points to the Web Content Accessibility Guidelines (WCAG) and the federal Section 508 Standards as helpful references for making website features accessible.</li></ul>
+<p>In other words, the law tells you the outcome — people with disabilities need to be able to use what you offer — and the industry standards tell you how to get there.</p>
+<h2>If you sell to cities, counties, or school districts</h2>
+<p>State and local governments have a more specific rule. The Department of Justice's Title II rule requires their web content and mobile apps to meet WCAG 2.1 Level AA. Under an interim final rule issued in April 2026, the <a href="https://www.ada.gov/resources/web-rule-first-steps/">compliance dates</a> are April 26, 2027 for governments serving populations of 50,000 or more, and April 26, 2028 for smaller governments and special districts.</p>
+<p>That rule applies to the government, not to you. But the Department also says a public entity cannot contract away its ADA responsibilities, so any content or app a vendor provides on its behalf has to meet the standard. If your business builds software, portals, or online forms for an Arizona city, county, or district, expect accessibility requirements to start showing up in contracts and RFPs.</p>
+<h2>What WCAG is, briefly</h2>
+<p>WCAG is published by the World Wide Web Consortium. Version 2.2 <a href="https://www.w3.org/WAI/news/2023-10-05/wcag22rec/">became a W3C Recommendation</a> in October 2023, and version 2.1 is the one named in the government rule. Both are organized around the same idea: content should be perceivable, operable, understandable, and robust for people using different abilities and tools.</p>
+<p>"Level AA" is the middle of three conformance levels and the one most organizations target.</p>
+<h2>What accessibility looks like in practice</h2>
+<p>The DOJ guidance lists common barriers, and they line up closely with what we see in audits of business apps:</p>
+<ul><li><strong>Low color contrast.</strong> Light gray text on a white background is hard to read for people with low vision, and for everyone else outdoors on a phone in a Phoenix afternoon.</li><li><strong>Images with no text alternative.</strong> A screen reader cannot describe a picture, a chart, or an icon button unless the developer provided a text description.</li><li><strong>Video without captions.</strong> People who are deaf or hard of hearing miss whatever is only said aloud.</li><li><strong>Pages that need a mouse.</strong> Some people navigate entirely by keyboard or by switch devices. If a menu, date picker, or checkout button cannot be reached with the Tab key, it is unusable for them.</li><li><strong>Unlabeled forms.</strong> A field that only shows placeholder text, or an error message that only turns a box red, leaves screen reader users guessing.</li></ul>
+<p>None of these are exotic. They are the ordinary details of building an interface, done carefully or done carelessly.</p>
+<h2>Why retrofitting costs more</h2>
+<p>Accessibility is cheapest when it is a requirement on day one. At that point it is mostly a matter of choosing components that already handle keyboard focus and labels, picking a color palette that passes contrast checks, and writing alt text as content is created.</p>
+<p>Retrofitting is a different job. Custom widgets have to be rebuilt. Colors baked into a brand have to change. Hundreds of images need descriptions. Forms need to be restructured. We have seen retrofits take longer than the original feature, because the team is untangling decisions instead of making them.</p>
+<h2>A note on overlay widgets</h2>
+<p>You may be pitched a script you add to your site that promises instant compliance. Be skeptical. These tools can adjust some things on the surface, but they cannot fix a checkout flow that was never built to work with a keyboard, or describe images nobody wrote descriptions for. Accessibility lives in how the software is built.</p>
+<h2>How we approach it</h2>
+<p>On new builds, we treat accessibility as part of the definition of done:</p>
+<ol><li><strong>Pick accessible building blocks.</strong> Well-maintained component libraries handle much of the keyboard and screen reader behavior correctly out of the box.</li><li><strong>Set contrast and type sizes in the design system</strong> so every new screen inherits them.</li><li><strong>Test with a keyboard and a screen reader</strong>, not only with automated scanners. Scanners catch a useful share of problems, but not whether a flow makes sense.</li><li><strong>Write it into acceptance criteria.</strong> "A user can complete checkout using only a keyboard" is a testable requirement.</li><li><strong>Keep it up.</strong> New content and new features can break what worked at launch, so accessibility checks belong in ongoing maintenance.</li></ol>
+<h2>Questions to ask about your current site or app</h2>
+<ul><li>Can someone complete your most important task — booking, buying, applying, paying — without a mouse?</li><li>Do your images and icon buttons have text descriptions?</li><li>Do your videos have captions?</li><li>Does your text pass a contrast check?</li><li>If you sell to a government entity, does your contract mention WCAG?</li></ul>
+<p>If you are not sure how your site or app holds up, or you are planning something new and want accessibility built in from the start, <a href="mailto:hello@xsatorilabs.net">tell us what you have</a>. We will tell you where the real gaps are and what it would take to close them.</p></article>
+<div class="tags"><span class="tag">Accessibility</span><span class="tag">Compliance</span><span class="tag">Web Apps</span></div>
+<div class="bio"><div class="av">NM</div>
+        <div><b>Nino Mihilli</b><p>Founder of Xsatori Labs and T47 Group. Twenty years building and scaling businesses, now shipping software for clients out of Phoenix, Arizona. <a href="https://www.ninomihilli.com">www.ninomihilli.com</a></p></div></div>
+<div class="cta"><h2>Have something you need built?</h2><p>Tell us what you're trying to ship and we'll tell you straight whether we're the right studio for it.</p>
+      <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a></div>
+      <a class="backlink" href="https://xsatorilabs.net/blog/">← All insights</a></div>
+</main>
+<footer><div class="foot">
+  <div>© 2026 Xsatori Labs · Phoenix, AZ · Part of the T47 Group family of companies.</div>
+  <div><a href="https://xsatorilabs.net/#products">Products</a> · <a href="https://xsatorilabs.net/partners/">Venture Partnerships</a> · <a href="https://xsatorilabs.net/blog/">Insights</a> · <a href="https://t47group.com">T47 Group</a> · <a href="mailto:hello@xsatorilabs.net">Contact</a></div>
+</div></footer>
+</body>
+</html>
