@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Getting your website and app ready for holiday traffic — Xsatori Labs</title>
+<meta name="description" content="A practical checklist for making sure your website, booking system, or app holds up during the holiday rush, from load testing to a code freeze and on-call plan." />
+<link rel="canonical" href="https://xsatorilabs.net/blog/holiday-traffic-readiness-checklist/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Getting your website and app ready for holiday traffic — Xsatori Labs" />
+<meta property="og:description" content="A practical checklist for making sure your website, booking system, or app holds up during the holiday rush, from load testing to a code freeze and on-call plan." />
+<meta property="og:url" content="https://xsatorilabs.net/blog/holiday-traffic-readiness-checklist/" />
+<meta property="og:site_name" content="Xsatori Labs" />
+<meta property="og:image" content="https://xsatorilabs.net/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://xsatorilabs.net/og-image.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="twitter:title" content="Getting your website and app ready for holiday traffic — Xsatori Labs" />
+<meta name="twitter:description" content="A practical checklist for making sure your website, booking system, or app holds up during the holiday rush, from load testing to a code freeze and on-call plan." />
+<link rel="alternate" type="application/rss+xml" title="Xsatori Labs — Insights" href="https://xsatorilabs.net/rss.xml" />
+<style>:root{--bg:#0a0b10;--bg2:#0f1119;--ink:#eef0f6;--muted:#9aa0b4;--faint:#6a7086;--line:rgba(255,255,255,.08);--card:rgba(255,255,255,.035);--accent:#7c5cff;--accent2:#31d0c6;--prose:#c9cddb;--serif:ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(880px 520px at 84% -10%, rgba(124,92,255,.16), transparent 60%),radial-gradient(720px 500px at -6% 10%, rgba(49,208,198,.10), transparent 58%);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 26px}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(10,11,16,.76);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1120px;margin:0 auto;padding:0 26px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}
+.logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
+nav.links{display:flex;gap:28px;align-items:center}
+nav.links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+nav.links a:hover{color:var(--ink)}
+nav.links a.on{color:var(--ink)}
+nav.links a.btn,nav.links a.btn:hover{color:#0a0b10}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;background:linear-gradient(135deg,#7c5cff,#31d0c6);color:#0a0b10;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+@media(max-width:760px){nav.links a:not(.btn){display:none}}
+.phead{padding:74px 0 34px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;display:block}
+h1{font-family:var(--serif);font-size:clamp(30px,5vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.meta{color:var(--faint);font-size:13.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.meta .dot{opacity:.5}
+article{padding:38px 0 20px;font-size:17px}
+article p{margin-bottom:22px;color:var(--prose)}
+article h2{font-family:var(--serif);font-size:clamp(22px,3.4vw,29px);font-weight:700;letter-spacing:-.3px;margin:42px 0 16px}
+article h3{font-size:19px;font-weight:800;margin:30px 0 12px}
+article ul,article ol{margin:0 0 22px 22px;color:var(--prose)}
+article li{margin-bottom:9px}
+article a{color:var(--accent2);border-bottom:1px solid var(--line)}
+article a:hover{border-bottom-color:var(--accent2)}
+article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:0 0 22px;color:var(--muted);font-style:italic}
+article code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14.5px}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article strong{color:var(--ink)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:34px 0 0}
+.tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card)}
+.bio{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:38px 0 0}
+.bio .av{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6)}
+.bio b{font-size:15px}
+.bio p{color:var(--muted);font-size:14px;margin:5px 0 0}
+.bio a{color:var(--accent2)}
+.postlist{padding:14px 0 40px}
+.item{display:block;border-bottom:1px solid var(--line);padding:26px 0;transition:opacity .15s}
+.item:hover{opacity:.82}
+.item .d{font-size:12.5px;color:var(--faint);letter-spacing:.4px;margin-bottom:9px}
+.item h2{font-family:var(--serif);font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.3px;margin-bottom:9px}
+.item p{color:var(--muted);font-size:15px}
+.item .more{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--accent2)}
+.cta{text-align:center;background:linear-gradient(180deg,rgba(124,92,255,.12),transparent);border:1px solid var(--line);border-radius:22px;padding:46px 28px;margin:46px 0}
+.cta h2{font-family:var(--serif);font-size:clamp(23px,3.6vw,31px);font-weight:700;margin-bottom:11px}
+.cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px;max-width:1120px;margin:0 auto;padding:0 26px}
+.foot a{color:var(--muted)} .foot a:hover{color:var(--ink)}
+.backlink{display:inline-block;margin:26px 0 0;font-size:14px;color:var(--muted);font-weight:600}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Getting your website and app ready for holiday traffic", "description": "A practical checklist for making sure your website, booking system, or app holds up during the holiday rush, from load testing to a code freeze and on-call plan.", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "url": "https://xsatorilabs.net/blog/holiday-traffic-readiness-checklist/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xsatorilabs.net/blog/holiday-traffic-readiness-checklist/"}, "author": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}, "publisher": {"@type": "Organization", "@id": "https://xsatorilabs.net/#org", "name": "Xsatori Labs", "url": "https://xsatorilabs.net/", "logo": "https://xsatorilabs.net/apple-touch-icon.png", "sameAs": ["https://t47group.com"], "founder": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}}, "keywords": "Reliability, Hosting, Small Business", "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xsatorilabs.net/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://xsatorilabs.net/blog/"}, {"@type": "ListItem", "position": 3, "name": "Getting your website and app ready for holiday traffic", "item": "https://xsatorilabs.net/blog/holiday-traffic-readiness-checklist/"}]}]}</script>
+</head>
+<body>
+<header><div class="nav">
+  <a class="brand" href="https://xsatorilabs.net/">
+    <div class="logo">XL</div>
+    <div>Xsatori Labs <small>Software Studio</small></div>
+  </a>
+  <nav class="links">
+    <a href="https://xsatorilabs.net/#products">Products</a><a href="https://xsatorilabs.net/#capabilities">Capabilities</a><a href="https://xsatorilabs.net/partners/">Venture Partnerships</a><a href="https://xsatorilabs.net/#about">About</a>
+    <a class="on" href="https://xsatorilabs.net/blog/">Insights</a>
+    <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap phead">
+  <span class="kicker">Reliability</span>
+  <h1>Getting your website and app ready for holiday traffic</h1>
+  <div class="meta"><span>Nino Mihilli</span><span class="dot">·</span>
+  <time datetime="2026-11-06">November 6, 2026</time>
+  <span class="dot">·</span><span>5 min read</span></div>
+</div>
+<div class="wrap"><article><p>Thanksgiving falls on November 26 this year, which puts Black Friday on November 27 and starts the busiest few weeks of the year for many businesses. For retailers it is obvious. For everyone else — restaurants taking catering orders, service companies booking end-of-year appointments, event venues, nonprofits running year-end giving — it is often a surprise when the website that has been fine all year slows down on the one day it matters.</p>
+<p>The good news is that most holiday outages come from a short list of causes, and most of them can be dealt with in a few weeks of focused work. Here is the checklist we use.</p>
+<h2>Know what "busy" means for you</h2>
+<p>Start with your own numbers. Look at last year's traffic, orders, or bookings for the same weeks and find your highest hour. Then decide what you are planning for this year: the same, double, or something else because of a promotion or a new marketing push.</p>
+<p>That one number shapes everything else. A site that needs to handle twice an ordinary afternoon is a very different problem from a site that needs to handle twenty times one.</p>
+<h2>Find the bottleneck before your customers do</h2>
+<p>Every system has one piece that gives out first. In the small-business apps we work on, it is usually one of these:</p>
+<ul><li><strong>The database.</strong> A report or search page that runs a heavy query on every visit is fine at ten users and painful at two hundred.</li><li><strong>A third-party service.</strong> Your payment processor, shipping calculator, inventory system, or email provider may have its own rate limits. If your checkout waits on all of them, it is only as fast as the slowest.</li><li><strong>Images and media.</strong> Large, unoptimized images make every page heavier and can push you into higher hosting or bandwidth charges.</li><li><strong>A single small server.</strong> Hosting that was sized for a quiet month, with no way to add capacity quickly.</li></ul>
+<p>A load test — simulated traffic aimed at a staging copy of your site — is the most direct way to find out which one you have. It does not need to be elaborate. Even a simple test of your three most important pages and your checkout or booking flow will tell you a lot.</p>
+<h2>Cheap wins that usually help</h2>
+<p><strong>Cache what does not change.</strong> Product pages, menus, and service descriptions do not need to be rebuilt for every visitor. A content delivery network or page caching can take a large share of the load off your server.</p>
+<p><strong>Compress and resize images.</strong> This is often the fastest improvement available, and it helps every visitor, not just the holiday ones.</p>
+<p><strong>Turn off what you do not need.</strong> Old tracking scripts, plugins nobody uses, and chat widgets from a trial that ended all slow pages down.</p>
+<p><strong>Check your hosting plan's limits.</strong> Know whether your plan can scale up automatically, how quickly, and what it costs. A surprise bill in January is better than an outage in November, but neither should be a surprise.</p>
+<h2>Protect the paths that make money</h2>
+<p>Not every page is equally important. A slow blog post is an annoyance. A broken checkout or booking form is lost revenue.</p>
+<p>Identify the two or three flows that matter most and make sure they keep working even when something else does not. That might mean a fallback if a shipping-rate service times out, a queue for confirmation emails so a slow email provider does not hold up the order, or a simple "we're busy, try again in a minute" page instead of an error.</p>
+<h2>Freeze changes before the rush</h2>
+<p>Most outages we see during busy periods are caused by a change, not by traffic. Someone pushes a small update on a Friday afternoon and something unrelated breaks.</p>
+<p>Set a change freeze. A common pattern is to finish all planned work by mid-November and allow only urgent fixes through the end of the year. Promotions, banners, and price changes that need to go live during the freeze should be built and tested in advance and switched on, not deployed.</p>
+<h2>Decide who is on call</h2>
+<p>Before the busy weeks, answer these questions in writing:</p>
+<ol><li>Who gets alerted if the site goes down or checkout errors spike?</li><li>How do they get alerted — text, phone call, or an email nobody reads on a holiday?</li><li>Who has the access needed to fix things, including hosting, domain, and payment accounts?</li><li>What is the phone number for each vendor's support line?</li><li>Who decides whether to roll back a change?</li></ol>
+<p>If the answer to any of these is "the developer we used last year," find out now whether that person is still reachable.</p>
+<h2>Monitor what customers experience</h2>
+<p>Server dashboards are useful, but the most important signal is whether a customer can actually complete a purchase or booking. An uptime monitor that loads your checkout page every few minutes, plus an alert when orders drop to zero during business hours, will catch problems that server metrics miss.</p>
+<h2>Watch for fraud, too</h2>
+<p>Busy periods attract card testing — automated attempts to run stolen card numbers through small purchases — and fake orders. Make sure your payment processor's fraud tools are turned on and that someone looks at unusual order patterns.</p>
+<h2>A two-week plan</h2>
+<p>If you are starting now:</p>
+<ul><li><strong>Week one:</strong> pull last year's peak numbers, list your critical flows, run a basic load test, and fix the worst bottleneck.</li><li><strong>Week two:</strong> optimize images, enable caching, confirm hosting limits, set up monitoring and alerts, write down the on-call plan, and start the change freeze.</li></ul>
+<p>We have spent a lot of time on systems that need to hold up under load, from consumer apps to the <a href="https://xsatori.com">Xsatori</a> exchange. If you want a second set of eyes on your site or app before the rush, <a href="mailto:hello@xsatorilabs.net">tell us what you're running</a> and we will help you find the weak spot first.</p></article>
+<div class="tags"><span class="tag">Reliability</span><span class="tag">Hosting</span><span class="tag">Small Business</span></div>
+<div class="bio"><div class="av">NM</div>
+        <div><b>Nino Mihilli</b><p>Founder of Xsatori Labs and T47 Group. Twenty years building and scaling businesses, now shipping software for clients out of Phoenix, Arizona. <a href="https://www.ninomihilli.com">www.ninomihilli.com</a></p></div></div>
+<div class="cta"><h2>Have something you need built?</h2><p>Tell us what you're trying to ship and we'll tell you straight whether we're the right studio for it.</p>
+      <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a></div>
+      <a class="backlink" href="https://xsatorilabs.net/blog/">← All insights</a></div>
+</main>
+<footer><div class="foot">
+  <div>© 2026 Xsatori Labs · Phoenix, AZ · Part of the T47 Group family of companies.</div>
+  <div><a href="https://xsatorilabs.net/#products">Products</a> · <a href="https://xsatorilabs.net/partners/">Venture Partnerships</a> · <a href="https://xsatorilabs.net/blog/">Insights</a> · <a href="https://t47group.com">T47 Group</a> · <a href="mailto:hello@xsatorilabs.net">Contact</a></div>
+</div></footer>
+</body>
+</html>
