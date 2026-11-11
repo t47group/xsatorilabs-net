@@ -3,8 +3,13 @@
 <title>Xsatori Labs — Insights</title>
 <link>https://xsatorilabs.net/blog/</link>
 <description>How we scope, price, and ship software — from the team behind Hookah Royale, Build My Boo, Flat OS, Xsatori, NMWWD, and Credit4Vets.</description>
-<language>en-us</language><lastBuildDate>Tue, 10 Nov 2026 20:08:54 +0000</lastBuildDate>
-<item><title>Data migration: moving off an old system without losing what matters</title>
+<language>en-us</language><lastBuildDate>Wed, 11 Nov 2026 00:28:15 +0000</lastBuildDate>
+<item><title>When a customer portal is worth building</title>
+<link>https://xsatorilabs.net/blog/when-to-build-a-customer-portal/</link>
+<guid isPermaLink="true">https://xsatorilabs.net/blog/when-to-build-a-customer-portal/</guid>
+<description>How to tell whether your business needs a customer portal, what a useful first version includes, and the questions to answer before you pay to build one.</description>
+<pubDate>Wed, 11 Nov 2026 13:00:00 +0000</pubDate>
+</item><item><title>Data migration: moving off an old system without losing what matters</title>
 <link>https://xsatorilabs.net/blog/moving-data-off-an-old-system/</link>
 <guid isPermaLink="true">https://xsatorilabs.net/blog/moving-data-off-an-old-system/</guid>
 <description>Moving data off an old system is where many software projects slip. Here is how to plan a data migration, clean records, test it, and cut over without surprises.</description>
