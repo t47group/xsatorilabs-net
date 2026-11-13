@@ -3,8 +3,13 @@
 <title>Xsatori Labs — Insights</title>
 <link>https://xsatorilabs.net/blog/</link>
 <description>How we scope, price, and ship software — from the team behind Hookah Royale, Build My Boo, Flat OS, Xsatori, NMWWD, and Credit4Vets.</description>
-<language>en-us</language><lastBuildDate>Thu, 12 Nov 2026 20:36:20 +0000</lastBuildDate>
-<item><title>When a customer portal is worth building</title>
+<language>en-us</language><lastBuildDate>Fri, 13 Nov 2026 00:56:57 +0000</lastBuildDate>
+<item><title>Putting an AI assistant in front of customers: what to set up first</title>
+<link>https://xsatorilabs.net/blog/ai-assistant-for-customers/</link>
+<guid isPermaLink="true">https://xsatorilabs.net/blog/ai-assistant-for-customers/</guid>
+<description>Before you add an AI chat or phone assistant for customers, set its limits, sources, handoffs, and review process. A practical setup guide for business owners.</description>
+<pubDate>Fri, 13 Nov 2026 13:00:00 +0000</pubDate>
+</item><item><title>When a customer portal is worth building</title>
 <link>https://xsatorilabs.net/blog/when-to-build-a-customer-portal/</link>
 <guid isPermaLink="true">https://xsatorilabs.net/blog/when-to-build-a-customer-portal/</guid>
 <description>How to tell whether your business needs a customer portal, what a useful first version includes, and the questions to answer before you pay to build one.</description>

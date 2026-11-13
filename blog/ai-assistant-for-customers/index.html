@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Putting an AI assistant in front of customers: what to set up first — Xsatori Labs</title>
+<meta name="description" content="Before you add an AI chat or phone assistant for customers, set its limits, sources, handoffs, and review process. A practical setup guide for business owners." />
+<link rel="canonical" href="https://xsatorilabs.net/blog/ai-assistant-for-customers/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Putting an AI assistant in front of customers: what to set up first — Xsatori Labs" />
+<meta property="og:description" content="Before you add an AI chat or phone assistant for customers, set its limits, sources, handoffs, and review process. A practical setup guide for business owners." />
+<meta property="og:url" content="https://xsatorilabs.net/blog/ai-assistant-for-customers/" />
+<meta property="og:site_name" content="Xsatori Labs" />
+<meta property="og:image" content="https://xsatorilabs.net/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://xsatorilabs.net/og-image.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="twitter:title" content="Putting an AI assistant in front of customers: what to set up first — Xsatori Labs" />
+<meta name="twitter:description" content="Before you add an AI chat or phone assistant for customers, set its limits, sources, handoffs, and review process. A practical setup guide for business owners." />
+<link rel="alternate" type="application/rss+xml" title="Xsatori Labs — Insights" href="https://xsatorilabs.net/rss.xml" />
+<style>:root{--bg:#0a0b10;--bg2:#0f1119;--ink:#eef0f6;--muted:#9aa0b4;--faint:#6a7086;--line:rgba(255,255,255,.08);--card:rgba(255,255,255,.035);--accent:#7c5cff;--accent2:#31d0c6;--prose:#c9cddb;--serif:ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(880px 520px at 84% -10%, rgba(124,92,255,.16), transparent 60%),radial-gradient(720px 500px at -6% 10%, rgba(49,208,198,.10), transparent 58%);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 26px}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(10,11,16,.76);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1120px;margin:0 auto;padding:0 26px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}
+.logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
+nav.links{display:flex;gap:28px;align-items:center}
+nav.links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+nav.links a:hover{color:var(--ink)}
+nav.links a.on{color:var(--ink)}
+nav.links a.btn,nav.links a.btn:hover{color:#0a0b10}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;background:linear-gradient(135deg,#7c5cff,#31d0c6);color:#0a0b10;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+@media(max-width:760px){nav.links a:not(.btn){display:none}}
+.phead{padding:74px 0 34px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;display:block}
+h1{font-family:var(--serif);font-size:clamp(30px,5vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.meta{color:var(--faint);font-size:13.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.meta .dot{opacity:.5}
+article{padding:38px 0 20px;font-size:17px}
+article p{margin-bottom:22px;color:var(--prose)}
+article h2{font-family:var(--serif);font-size:clamp(22px,3.4vw,29px);font-weight:700;letter-spacing:-.3px;margin:42px 0 16px}
+article h3{font-size:19px;font-weight:800;margin:30px 0 12px}
+article ul,article ol{margin:0 0 22px 22px;color:var(--prose)}
+article li{margin-bottom:9px}
+article a{color:var(--accent2);border-bottom:1px solid var(--line)}
+article a:hover{border-bottom-color:var(--accent2)}
+article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:0 0 22px;color:var(--muted);font-style:italic}
+article code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14.5px}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article strong{color:var(--ink)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:34px 0 0}
+.tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card)}
+.bio{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:38px 0 0}
+.bio .av{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6)}
+.bio b{font-size:15px}
+.bio p{color:var(--muted);font-size:14px;margin:5px 0 0}
+.bio a{color:var(--accent2)}
+.postlist{padding:14px 0 40px}
+.item{display:block;border-bottom:1px solid var(--line);padding:26px 0;transition:opacity .15s}
+.item:hover{opacity:.82}
+.item .d{font-size:12.5px;color:var(--faint);letter-spacing:.4px;margin-bottom:9px}
+.item h2{font-family:var(--serif);font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.3px;margin-bottom:9px}
+.item p{color:var(--muted);font-size:15px}
+.item .more{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--accent2)}
+.cta{text-align:center;background:linear-gradient(180deg,rgba(124,92,255,.12),transparent);border:1px solid var(--line);border-radius:22px;padding:46px 28px;margin:46px 0}
+.cta h2{font-family:var(--serif);font-size:clamp(23px,3.6vw,31px);font-weight:700;margin-bottom:11px}
+.cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px;max-width:1120px;margin:0 auto;padding:0 26px}
+.foot a{color:var(--muted)} .foot a:hover{color:var(--ink)}
+.backlink{display:inline-block;margin:26px 0 0;font-size:14px;color:var(--muted);font-weight:600}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Putting an AI assistant in front of customers: what to set up first", "description": "Before you add an AI chat or phone assistant for customers, set its limits, sources, handoffs, and review process. A practical setup guide for business owners.", "datePublished": "2026-11-13", "dateModified": "2026-11-13", "url": "https://xsatorilabs.net/blog/ai-assistant-for-customers/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xsatorilabs.net/blog/ai-assistant-for-customers/"}, "author": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}, "publisher": {"@type": "Organization", "@id": "https://xsatorilabs.net/#org", "name": "Xsatori Labs", "url": "https://xsatorilabs.net/", "logo": "https://xsatorilabs.net/apple-touch-icon.png", "sameAs": ["https://t47group.com"], "founder": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}}, "keywords": "AI, Customer Service, Automation", "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xsatorilabs.net/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://xsatorilabs.net/blog/"}, {"@type": "ListItem", "position": 3, "name": "Putting an AI assistant in front of customers: what to set up first", "item": "https://xsatorilabs.net/blog/ai-assistant-for-customers/"}]}]}</script>
+</head>
+<body>
+<header><div class="nav">
+  <a class="brand" href="https://xsatorilabs.net/">
+    <div class="logo">XL</div>
+    <div>Xsatori Labs <small>Software Studio</small></div>
+  </a>
+  <nav class="links">
+    <a href="https://xsatorilabs.net/#products">Products</a><a href="https://xsatorilabs.net/#capabilities">Capabilities</a><a href="https://xsatorilabs.net/partners/">Venture Partnerships</a><a href="https://xsatorilabs.net/#about">About</a>
+    <a class="on" href="https://xsatorilabs.net/blog/">Insights</a>
+    <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap phead">
+  <span class="kicker">AI</span>
+  <h1>Putting an AI assistant in front of customers: what to set up first</h1>
+  <div class="meta"><span>Nino Mihilli</span><span class="dot">·</span>
+  <time datetime="2026-11-13">November 13, 2026</time>
+  <span class="dot">·</span><span>5 min read</span></div>
+</div>
+<div class="wrap"><article><p>An AI assistant that answers your customers — on your website, in a chat window, or on the phone — is one of the most requested AI projects we hear about. It is also the one where mistakes are most visible. An internal tool that gets something wrong produces a bad draft someone catches. A customer-facing assistant that gets something wrong says it to a customer, in your name.</p>
+<p>That does not mean you should not do it. It means the setup work matters more than the model you choose. Here is what we put in place before an assistant talks to anyone.</p>
+<h2>Decide what it is for, narrowly</h2>
+<p>"Answer customer questions" is not a scope. These are:</p>
+<ul><li>Answer questions about hours, locations, service areas, and pricing that is published.</li><li>Collect the details of a new inquiry and hand it to the right person.</li><li>Book, reschedule, or cancel appointments within set rules.</li><li>Look up order or job status for a verified customer.</li></ul>
+<p>Pick one or two to start. A narrow assistant can be tested thoroughly. A broad one cannot, because the number of things it might be asked is endless.</p>
+<p>Write down just as clearly what it should not do: quote custom prices, make promises about refunds or warranties, give legal, medical, or financial advice, or discuss anything outside your business.</p>
+<h2>Give it sources, not just instructions</h2>
+<p>An assistant that answers from general knowledge will improvise. One that answers from your own material — a maintained set of approved answers, policies, and service details — is far more reliable.</p>
+<p>That material becomes something your business has to own. When prices change, hours change for the holidays, or a policy is updated, someone needs to update the source the assistant reads from. If nobody is responsible for that, the assistant will confidently repeat last year's information.</p>
+<h2>Treat its words as your words</h2>
+<p>Whatever the assistant tells a customer, the customer will reasonably take as coming from your business. Plan on that basis. If you would not let a brand-new employee say something on their first day without checking, do not let the assistant say it either.</p>
+<p>Practical consequences:</p>
+<ul><li>Policies with money attached — refunds, cancellations, guarantees — should be quoted exactly from approved text, or handed to a person.</li><li>The assistant should say when it is not sure, rather than guess.</li><li>It should be clear to customers that they are talking with an automated assistant, with an easy way to reach a person.</li></ul>
+<h2>Build the handoff before anything else</h2>
+<p>The most important feature of a customer-facing assistant is how it hands off to a human. Decide:</p>
+<ul><li><strong>When it hands off.</strong> Complaints, billing disputes, anything urgent, anything it cannot answer from its sources, and any time the customer asks for a person.</li><li><strong>How it hands off.</strong> A transfer to a live line, a ticket in your help desk, a text to the on-call person — with the conversation so far attached, so the customer does not have to repeat themselves.</li><li><strong>What happens after hours.</strong> A clear promise of when someone will follow up, and a process that actually keeps it.</li></ul>
+<p>An assistant that answers the common questions well and hands the rest off cleanly is a success. One that tries to answer everything is a liability.</p>
+<h2>Verify before it shares anything private</h2>
+<p>If the assistant can look up orders, appointments, or accounts, it needs a way to confirm who it is talking to before sharing details. A phone number or name alone is not enough. Use the same verification your staff would — a code sent to the number on file, an order number plus ZIP code, or a logged-in session.</p>
+<p>Limit what it can do even for verified customers. Reading a status is low risk. Changing an address, issuing a refund, or canceling a contract should usually require a person.</p>
+<h2>Know where the conversations go</h2>
+<p>Customer conversations will include names, phone numbers, addresses, and sometimes more sensitive details. Before launch, find out from your AI provider where that data is stored, how long it is kept, and whether it is used to train models. Business and API tiers from major providers generally publish clear terms on this; read them rather than assuming.</p>
+<p>Keep your own log of conversations as well, with sensible retention, so you can review what was said when a customer raises a concern.</p>
+<h2>Test it with real questions</h2>
+<p>Pull a few hundred real questions from your inbox, chat history, and call notes. Include the hard ones: angry customers, ambiguous requests, questions in Spanish if you serve Spanish-speaking customers, and people trying to get it to say something it should not.</p>
+<p>Run every one through the assistant and have someone who knows the business grade the answers. Repeat that test whenever you change its instructions, sources, or underlying model. This is the same discipline we use for internal AI features, and it is the only reliable way to know whether a change made things better or worse.</p>
+<h2>Review it weekly at first</h2>
+<p>After launch, read a sample of conversations every week. Look for wrong answers, missed handoffs, and questions it keeps failing on. Those failures are your roadmap: either add an approved answer, tighten a rule, or decide that type of question should always go to a person.</p>
+<p>Track a few numbers over time: how many conversations it resolves, how many it hands off, how often customers ask for a human, and how many complaints mention it.</p>
+<h2>A sensible first launch</h2>
+<p>Start with one channel and one job. Run it during business hours first, when a person can step in quickly. Expand to after-hours coverage once you trust the handoffs. Add capabilities one at a time, each tested before it goes live.</p>
+<p>We build AI features with the same engineering discipline as everything else, and customer-facing ones get the most caution. If you are considering an assistant for your customers, <a href="mailto:hello@xsatorilabs.net">tell us what they ask you most</a> and we will help you decide what it should handle and what it should hand to your team.</p></article>
+<div class="tags"><span class="tag">AI</span><span class="tag">Customer Service</span><span class="tag">Automation</span></div>
+<div class="bio"><div class="av">NM</div>
+        <div><b>Nino Mihilli</b><p>Founder of Xsatori Labs and T47 Group. Twenty years building and scaling businesses, now shipping software for clients out of Phoenix, Arizona. <a href="https://www.ninomihilli.com">www.ninomihilli.com</a></p></div></div>
+<div class="cta"><h2>Have something you need built?</h2><p>Tell us what you're trying to ship and we'll tell you straight whether we're the right studio for it.</p>
+      <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a></div>
+      <a class="backlink" href="https://xsatorilabs.net/blog/">← All insights</a></div>
+</main>
+<footer><div class="foot">
+  <div>© 2026 Xsatori Labs · Phoenix, AZ · Part of the T47 Group family of companies.</div>
+  <div><a href="https://xsatorilabs.net/#products">Products</a> · <a href="https://xsatorilabs.net/partners/">Venture Partnerships</a> · <a href="https://xsatorilabs.net/blog/">Insights</a> · <a href="https://t47group.com">T47 Group</a> · <a href="mailto:hello@xsatorilabs.net">Contact</a></div>
+</div></footer>
+</body>
+</html>
