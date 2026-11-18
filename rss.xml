@@ -3,8 +3,13 @@
 <title>Xsatori Labs — Insights</title>
 <link>https://xsatorilabs.net/blog/</link>
 <description>How we scope, price, and ship software — from the team behind Hookah Royale, Build My Boo, Flat OS, Xsatori, NMWWD, and Credit4Vets.</description>
-<language>en-us</language><lastBuildDate>Tue, 17 Nov 2026 21:27:45 +0000</lastBuildDate>
-<item><title>Stopping fake invoices and payment-change fraud with better software controls</title>
+<language>en-us</language><lastBuildDate>Wed, 18 Nov 2026 02:14:04 +0000</lastBuildDate>
+<item><title>Arizona's data breach law and what your software should be ready for</title>
+<link>https://xsatorilabs.net/blog/arizona-data-breach-law-for-software/</link>
+<guid isPermaLink="true">https://xsatorilabs.net/blog/arizona-data-breach-law-for-software/</guid>
+<description>A plain-English look at Arizona's data breach notification law, what counts as personal information, and how to design software to limit a breach.</description>
+<pubDate>Wed, 18 Nov 2026 13:00:00 +0000</pubDate>
+</item><item><title>Stopping fake invoices and payment-change fraud with better software controls</title>
 <link>https://xsatorilabs.net/blog/payment-fraud-controls-in-business-software/</link>
 <guid isPermaLink="true">https://xsatorilabs.net/blog/payment-fraud-controls-in-business-software/</guid>
 <description>Business email compromise costs businesses billions a year. These software controls make fake invoices and bank-change scams much harder to pull off.</description>
@@ -149,9 +154,4 @@
 <guid isPermaLink="true">https://xsatorilabs.net/blog/marketplace-cold-start-problem/</guid>
 <description>Most failed marketplaces had working software. What they didn't have was a credible plan for the first ninety days of emptiness.</description>
 <pubDate>Fri, 11 Sep 2026 13:00:00 +0000</pubDate>
-</item><item><title>What a two-sided marketplace actually costs to build</title>
-<link>https://xsatorilabs.net/blog/two-sided-marketplace-cost/</link>
-<guid isPermaLink="true">https://xsatorilabs.net/blog/two-sided-marketplace-cost/</guid>
-<description>Most marketplace quotes are wrong because they price the wrong thing. Here's where the money actually goes, and which line items nobody warns you about.</description>
-<pubDate>Wed, 09 Sep 2026 13:00:00 +0000</pubDate>
 </item></channel></rss>
