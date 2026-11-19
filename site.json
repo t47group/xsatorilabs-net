@@ -9,6 +9,10 @@
       "https://xsatorilabs.net/#products"
     ],
     [
+      "Apps",
+      "https://xsatorilabs.net/apps/"
+    ],
+    [
       "Capabilities",
       "https://xsatorilabs.net/#capabilities"
     ],
@@ -32,6 +36,10 @@
     [
       "Products",
       "https://xsatorilabs.net/#products"
+    ],
+    [
+      "Apps",
+      "https://xsatorilabs.net/apps/"
     ],
     [
       "Venture Partnerships",
@@ -113,6 +121,7 @@
     "logoshadow": "0 10px 30px rgba(124,92,255,.34)"
   },
   "extra_pages": [
-    "/partners/"
+    "/partners/",
+    "/apps/"
   ]
 }

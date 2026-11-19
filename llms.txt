@@ -29,5 +29,6 @@
 ## Pages
 
 - [Home](https://xsatorilabs.net/): What the studio builds, featured work and how to start a project.
+- [Apps](https://xsatorilabs.net/apps/): Every app Xsatori Labs LLC has published, with App Store and Google Play links. Developer pages: https://apps.apple.com/us/developer/xsatori-labs-llc/id6808012312 and https://play.google.com/store/apps/developer?id=Xsatori+Labs+llc
 - [Venture Partnerships](https://xsatorilabs.net/partners/): Cash-plus-equity partnerships, how they work, the Build My Boo case study and the application.
 - [Insights](https://xsatorilabs.net/blog/): Articles on software costs, MVPs, marketplaces, build vs. buy and choosing a software studio in Phoenix.
