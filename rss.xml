@@ -3,8 +3,13 @@
 <title>Xsatori Labs — Insights</title>
 <link>https://xsatorilabs.net/blog/</link>
 <description>How we scope, price, and ship software — from the team behind Hookah Royale, Build My Boo, Flat OS, Xsatori, NMWWD, and Credit4Vets.</description>
-<language>en-us</language><lastBuildDate>Sun, 22 Nov 2026 20:05:18 +0000</lastBuildDate>
-<item><title>Adding text messaging to your software: registration, consent, and costs</title>
+<language>en-us</language><lastBuildDate>Mon, 23 Nov 2026 00:38:01 +0000</lastBuildDate>
+<item><title>How to test software you're paying for: acceptance testing in plain English</title>
+<link>https://xsatorilabs.net/blog/user-acceptance-testing-for-owners/</link>
+<guid isPermaLink="true">https://xsatorilabs.net/blog/user-acceptance-testing-for-owners/</guid>
+<description>A plain-English guide to acceptance testing for business owners: how to check that new software does what you paid for before you sign off and launch.</description>
+<pubDate>Mon, 23 Nov 2026 13:00:00 +0000</pubDate>
+</item><item><title>Adding text messaging to your software: registration, consent, and costs</title>
 <link>https://xsatorilabs.net/blog/adding-text-messaging-to-your-software/</link>
 <guid isPermaLink="true">https://xsatorilabs.net/blog/adding-text-messaging-to-your-software/</guid>
 <description>Adding SMS reminders or alerts to your business software? Here is what to know about carrier registration, customer consent, opt-outs, and per-message costs first.</description>
@@ -149,9 +154,4 @@
 <guid isPermaLink="true">https://xsatorilabs.net/blog/building-hookah-royale-realtime-multiplayer/</guid>
 <description>A case study in shipping synchronized card games across web, iOS, and Android — and the architectural decisions that kept the team small.</description>
 <pubDate>Wed, 16 Sep 2026 13:00:00 +0000</pubDate>
-</item><item><title>Build vs. buy: when internal software is worth writing yourself</title>
-<link>https://xsatorilabs.net/blog/build-vs-buy-internal-software/</link>
-<guid isPermaLink="true">https://xsatorilabs.net/blog/build-vs-buy-internal-software/</guid>
-<description>Most companies should buy. Here's the specific set of conditions under which building your own internal system actually pays back, and how to tell which side you're on.</description>
-<pubDate>Mon, 14 Sep 2026 13:00:00 +0000</pubDate>
 </item></channel></rss>
