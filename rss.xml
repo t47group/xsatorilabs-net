@@ -3,8 +3,13 @@
 <title>Xsatori Labs — Insights</title>
 <link>https://xsatorilabs.net/blog/</link>
 <description>How we scope, price, and ship software — from the team behind Hookah Royale, Build My Boo, Flat OS, Xsatori, NMWWD, and Credit4Vets.</description>
-<language>en-us</language><lastBuildDate>Tue, 24 Nov 2026 22:51:48 +0000</lastBuildDate>
-<item><title>How to test software you're paying for: acceptance testing in plain English</title>
+<language>en-us</language><lastBuildDate>Wed, 25 Nov 2026 03:25:46 +0000</lastBuildDate>
+<item><title>A year-end tech housekeeping checklist for small businesses</title>
+<link>https://xsatorilabs.net/blog/year-end-tech-housekeeping-checklist/</link>
+<guid isPermaLink="true">https://xsatorilabs.net/blog/year-end-tech-housekeeping-checklist/</guid>
+<description>A practical year-end checklist for your business technology: domains, certificates, accounts, subscriptions, backups, and documentation to sort out before 2027.</description>
+<pubDate>Wed, 25 Nov 2026 13:00:00 +0000</pubDate>
+</item><item><title>How to test software you're paying for: acceptance testing in plain English</title>
 <link>https://xsatorilabs.net/blog/user-acceptance-testing-for-owners/</link>
 <guid isPermaLink="true">https://xsatorilabs.net/blog/user-acceptance-testing-for-owners/</guid>
 <description>A plain-English guide to acceptance testing for business owners: how to check that new software does what you paid for before you sign off and launch.</description>
@@ -149,9 +154,4 @@
 <guid isPermaLink="true">https://xsatorilabs.net/blog/fixed-bid-vs-time-and-materials/</guid>
 <description>Fixed bid feels safer and often isn't. Here's what each structure really does to incentives, and how to pick without getting burned.</description>
 <pubDate>Fri, 18 Sep 2026 13:00:00 +0000</pubDate>
-</item><item><title>Building Hookah Royale: real-time multiplayer on a small team</title>
-<link>https://xsatorilabs.net/blog/building-hookah-royale-realtime-multiplayer/</link>
-<guid isPermaLink="true">https://xsatorilabs.net/blog/building-hookah-royale-realtime-multiplayer/</guid>
-<description>A case study in shipping synchronized card games across web, iOS, and Android — and the architectural decisions that kept the team small.</description>
-<pubDate>Wed, 16 Sep 2026 13:00:00 +0000</pubDate>
 </item></channel></rss>
