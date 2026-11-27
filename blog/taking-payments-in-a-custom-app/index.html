@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Taking payments in a custom app: fees, PCI scope, and what to own — Xsatori Labs</title>
+<meta name="description" content="What business owners should know before adding payments to a custom app: processor fees, PCI compliance scope, refunds and disputes, and keeping control of the account." />
+<link rel="canonical" href="https://xsatorilabs.net/blog/taking-payments-in-a-custom-app/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Taking payments in a custom app: fees, PCI scope, and what to own — Xsatori Labs" />
+<meta property="og:description" content="What business owners should know before adding payments to a custom app: processor fees, PCI compliance scope, refunds and disputes, and keeping control of the account." />
+<meta property="og:url" content="https://xsatorilabs.net/blog/taking-payments-in-a-custom-app/" />
+<meta property="og:site_name" content="Xsatori Labs" />
+<meta property="og:image" content="https://xsatorilabs.net/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://xsatorilabs.net/og-image.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="twitter:title" content="Taking payments in a custom app: fees, PCI scope, and what to own — Xsatori Labs" />
+<meta name="twitter:description" content="What business owners should know before adding payments to a custom app: processor fees, PCI compliance scope, refunds and disputes, and keeping control of the account." />
+<link rel="alternate" type="application/rss+xml" title="Xsatori Labs — Insights" href="https://xsatorilabs.net/rss.xml" />
+<style>:root{--bg:#0a0b10;--bg2:#0f1119;--ink:#eef0f6;--muted:#9aa0b4;--faint:#6a7086;--line:rgba(255,255,255,.08);--card:rgba(255,255,255,.035);--accent:#7c5cff;--accent2:#31d0c6;--prose:#c9cddb;--serif:ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(880px 520px at 84% -10%, rgba(124,92,255,.16), transparent 60%),radial-gradient(720px 500px at -6% 10%, rgba(49,208,198,.10), transparent 58%);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 26px}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(10,11,16,.76);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1120px;margin:0 auto;padding:0 26px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}
+.logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
+nav.links{display:flex;gap:28px;align-items:center}
+nav.links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+nav.links a:hover{color:var(--ink)}
+nav.links a.on{color:var(--ink)}
+nav.links a.btn,nav.links a.btn:hover{color:#0a0b10}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;background:linear-gradient(135deg,#7c5cff,#31d0c6);color:#0a0b10;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,92,255,.34)}
+@media(max-width:760px){nav.links a:not(.btn){display:none}}
+.phead{padding:74px 0 34px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;display:block}
+h1{font-family:var(--serif);font-size:clamp(30px,5vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.meta{color:var(--faint);font-size:13.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.meta .dot{opacity:.5}
+article{padding:38px 0 20px;font-size:17px}
+article p{margin-bottom:22px;color:var(--prose)}
+article h2{font-family:var(--serif);font-size:clamp(22px,3.4vw,29px);font-weight:700;letter-spacing:-.3px;margin:42px 0 16px}
+article h3{font-size:19px;font-weight:800;margin:30px 0 12px}
+article ul,article ol{margin:0 0 22px 22px;color:var(--prose)}
+article li{margin-bottom:9px}
+article a{color:var(--accent2);border-bottom:1px solid var(--line)}
+article a:hover{border-bottom-color:var(--accent2)}
+article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:0 0 22px;color:var(--muted);font-style:italic}
+article code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14.5px}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article strong{color:var(--ink)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:34px 0 0}
+.tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card)}
+.bio{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:38px 0 0}
+.bio .av{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#0a0b10;background:linear-gradient(135deg,#7c5cff,#31d0c6)}
+.bio b{font-size:15px}
+.bio p{color:var(--muted);font-size:14px;margin:5px 0 0}
+.bio a{color:var(--accent2)}
+.postlist{padding:14px 0 40px}
+.item{display:block;border-bottom:1px solid var(--line);padding:26px 0;transition:opacity .15s}
+.item:hover{opacity:.82}
+.item .d{font-size:12.5px;color:var(--faint);letter-spacing:.4px;margin-bottom:9px}
+.item h2{font-family:var(--serif);font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.3px;margin-bottom:9px}
+.item p{color:var(--muted);font-size:15px}
+.item .more{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--accent2)}
+.cta{text-align:center;background:linear-gradient(180deg,rgba(124,92,255,.12),transparent);border:1px solid var(--line);border-radius:22px;padding:46px 28px;margin:46px 0}
+.cta h2{font-family:var(--serif);font-size:clamp(23px,3.6vw,31px);font-weight:700;margin-bottom:11px}
+.cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px;max-width:1120px;margin:0 auto;padding:0 26px}
+.foot a{color:var(--muted)} .foot a:hover{color:var(--ink)}
+.backlink{display:inline-block;margin:26px 0 0;font-size:14px;color:var(--muted);font-weight:600}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Taking payments in a custom app: fees, PCI scope, and what to own", "description": "What business owners should know before adding payments to a custom app: processor fees, PCI compliance scope, refunds and disputes, and keeping control of the account.", "datePublished": "2026-11-27", "dateModified": "2026-11-27", "url": "https://xsatorilabs.net/blog/taking-payments-in-a-custom-app/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xsatorilabs.net/blog/taking-payments-in-a-custom-app/"}, "author": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}, "publisher": {"@type": "Organization", "@id": "https://xsatorilabs.net/#org", "name": "Xsatori Labs", "url": "https://xsatorilabs.net/", "logo": "https://xsatorilabs.net/apple-touch-icon.png", "sameAs": ["https://t47group.com"], "founder": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder, Xsatori Labs", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}}, "keywords": "Payments, Integrations, Security", "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xsatorilabs.net/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://xsatorilabs.net/blog/"}, {"@type": "ListItem", "position": 3, "name": "Taking payments in a custom app: fees, PCI scope, and what to own", "item": "https://xsatorilabs.net/blog/taking-payments-in-a-custom-app/"}]}]}</script>
+</head>
+<body>
+<header><div class="nav">
+  <a class="brand" href="https://xsatorilabs.net/">
+    <div class="logo">XL</div>
+    <div>Xsatori Labs <small>Software Studio</small></div>
+  </a>
+  <nav class="links">
+    <a href="https://xsatorilabs.net/#products">Products</a><a href="https://xsatorilabs.net/apps/">Apps</a><a href="https://xsatorilabs.net/#capabilities">Capabilities</a><a href="https://xsatorilabs.net/partners/">Venture Partnerships</a><a href="https://xsatorilabs.net/#about">About</a>
+    <a class="on" href="https://xsatorilabs.net/blog/">Insights</a>
+    <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap phead">
+  <span class="kicker">Payments</span>
+  <h1>Taking payments in a custom app: fees, PCI scope, and what to own</h1>
+  <div class="meta"><span>Nino Mihilli</span><span class="dot">·</span>
+  <time datetime="2026-11-27">November 27, 2026</time>
+  <span class="dot">·</span><span>5 min read</span></div>
+</div>
+<div class="wrap"><article><p>It is Black Friday, which makes it a fitting day to talk about the part of a custom app that touches money. Taking payments — deposits, invoices, subscriptions, online orders — is one of the most common features in the software we scope, and one of the easiest to get wrong in ways that do not show up until something goes sideways.</p>
+<p>The good news is that you almost never need to build payment handling yourself. The decisions that matter are about which provider you use, how the payment form is set up, and who controls the account. Here is what to know.</p>
+<h2>Use a payment processor, and let it hold the card data</h2>
+<p>Payment processors such as Stripe, Square, and others handle the hard parts: collecting card details securely, talking to the card networks, detecting fraud, and moving money into your bank account. Your app tells the processor what to charge, and the processor tells your app whether it worked.</p>
+<p>The most important design principle is that card numbers should never touch your servers. Modern processors provide payment forms and hosted checkout pages that collect card details directly, then give your app a token that represents the card. Your software can charge that token again later — for a subscription or a repeat customer — without ever seeing the number.</p>
+<p>This is not just good security. It shapes your compliance obligations.</p>
+<h2>What PCI compliance means for you</h2>
+<p>Any business that accepts card payments is expected to follow the Payment Card Industry Data Security Standard, or PCI DSS, maintained by the PCI Security Standards Council. Most small businesses demonstrate compliance with a self-assessment questionnaire, and which questionnaire applies depends on how card data flows through your systems.</p>
+<p>The shortest one, known as SAQ A, is for merchants that fully outsource card handling to a compliant provider. That is a strong reason to use a hosted checkout or the processor's embedded payment fields rather than building your own form.</p>
+<p>Two details worth knowing:</p>
+<ul><li><strong>The standard was updated for embedded payment forms.</strong> According to the <a href="https://blog.pcisecuritystandards.org/faq-clarifies-new-saq-a-eligibility-criteria-for-e-commerce-merchants">PCI Security Standards Council</a>, as of April 1, 2025, merchants using SAQ A with a provider's payment form embedded in their own page (for example, in an iframe) must confirm their site is protected against malicious scripts. The Council describes ways to meet that, including written confirmation from the payment provider. Redirecting customers to the provider's own checkout page is treated differently.</li><li><strong>Your processor and bank decide which questionnaire applies.</strong> The Council advises merchants to confirm with their acquirer that SAQ A is right for their setup. Ask your processor, and keep the answer on file.</li></ul>
+<p>This is general information. Your processor's support team and, where needed, a qualified security assessor can confirm what applies to you.</p>
+<h2>Understand the fees before you set prices</h2>
+<p>Processor fees vary by provider, card type, and how the payment is taken. As one reference point, Stripe's <a href="https://stripe.com/pricing">published US pricing</a> at the time of writing lists 2.9% plus 30 cents for domestic card payments online, 0.8% capped at $5 for ACH bank debits, an additional 1.5% for international cards, and a $15 fee for each dispute. Other providers price differently, and businesses with larger volume can sometimes negotiate.</p>
+<p>What this means for your app:</p>
+<ul><li><strong>Large invoices may be cheaper by bank transfer.</strong> For a business that bills clients thousands of dollars at a time, offering ACH alongside cards can make a real difference in fees. Your app can present both.</li><li><strong>Small transactions are expensive in percentage terms.</strong> A fixed per-transaction fee matters a lot on a $5 charge and very little on a $500 one.</li><li><strong>Do not forget refunds and disputes.</strong> Know your processor's policy on whether fees are returned when you refund a customer.</li><li><strong>Talk to your accountant</strong> about how fees and refunds are recorded, especially if the app also syncs with your accounting system.</li></ul>
+<h2>Plan for the messy parts</h2>
+<p>The charge itself is the easy part. Most of the design work goes into what happens around it:</p>
+<ul><li><strong>Failed payments.</strong> Cards expire and get declined. For subscriptions, decide how many times to retry, how to notify the customer, and what happens to their access.</li><li><strong>Refunds and partial refunds.</strong> Who can issue them, up to what amount, and how they are recorded.</li><li><strong>Disputes.</strong> When a customer disputes a charge with their bank, you will need to respond with evidence. Software that stores receipts, delivery confirmations, signed agreements, and communication history makes that much easier.</li><li><strong>Deposits and balances.</strong> If you take a deposit now and charge the balance later, the app has to track both and handle cancellations in between.</li><li><strong>Notifications from the processor.</strong> Payment status changes arrive as messages from the processor to your app, sometimes out of order or more than once. The app needs to handle them so a payment is never recorded twice.</li></ul>
+<h2>Keep the account in your name</h2>
+<p>The processor account should belong to your business, set up with your business's legal name, tax ID, and bank account, and owned by someone at your company. Your developers can be given limited access to build and test.</p>
+<p>When a payment account is set up by a developer under a personal login and that developer moves on, untangling it is slow and stressful, and in the meantime the business may not be able to see its own payment history. The same principle applies to every account your software depends on, and we wrote more about it in <a href="/blog/owning-your-code-and-source-escrow/">who owns your code</a>.</p>
+<h2>Watch for fraud</h2>
+<p>Online payment forms attract automated card testing — criminals running stolen card numbers through small charges to see which work. Turn on your processor's fraud tools, add bot protection to public payment forms, and set up alerts for unusual patterns like many small failed charges in a short period.</p>
+<h2>Questions to ask before you build</h2>
+<ol><li>Which processor, and does it support the payment methods your customers want?</li><li>Will card details be collected by the processor's hosted page or embedded fields?</li><li>Which PCI questionnaire applies, and has the processor confirmed it?</li><li>How will refunds, disputes, and failed payments be handled in the app?</li><li>Who owns the processor account?</li><li>How do payments flow into your accounting system?</li></ol>
+<p>If you want to start taking payments in your app, or you are not sure the way you take them today is set up safely, <a href="mailto:hello@xsatorilabs.net">tell us how you get paid</a> and we will help you design it properly.</p></article>
+<div class="tags"><span class="tag">Payments</span><span class="tag">Integrations</span><span class="tag">Security</span></div>
+<div class="bio"><div class="av">NM</div>
+        <div><b>Nino Mihilli</b><p>Founder of Xsatori Labs and T47 Group. Twenty years building and scaling businesses, now shipping software for clients out of Phoenix, Arizona. <a href="https://www.ninomihilli.com">www.ninomihilli.com</a></p></div></div>
+<div class="cta"><h2>Have something you need built?</h2><p>Tell us what you're trying to ship and we'll tell you straight whether we're the right studio for it.</p>
+      <a class="btn" href="mailto:hello@xsatorilabs.net">Start a project</a></div>
+      <a class="backlink" href="https://xsatorilabs.net/blog/">← All insights</a></div>
+</main>
+<footer><div class="foot">
+  <div>© 2026 Xsatori Labs · Phoenix, AZ · Part of the T47 Group family of companies.</div>
+  <div><a href="https://xsatorilabs.net/#products">Products</a> · <a href="https://xsatorilabs.net/apps/">Apps</a> · <a href="https://xsatorilabs.net/partners/">Venture Partnerships</a> · <a href="https://xsatorilabs.net/blog/">Insights</a> · <a href="https://t47group.com">T47 Group</a> · <a href="mailto:hello@xsatorilabs.net">Contact</a></div>
+</div></footer>
+</body>
+</html>

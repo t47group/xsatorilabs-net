@@ -3,8 +3,13 @@
 <title>Xsatori Labs — Insights</title>
 <link>https://xsatorilabs.net/blog/</link>
 <description>How we scope, price, and ship software — from the team behind Hookah Royale, Build My Boo, Flat OS, Xsatori, NMWWD, and Credit4Vets.</description>
-<language>en-us</language><lastBuildDate>Thu, 26 Nov 2026 22:03:10 +0000</lastBuildDate>
-<item><title>A year-end tech housekeeping checklist for small businesses</title>
+<language>en-us</language><lastBuildDate>Fri, 27 Nov 2026 02:41:45 +0000</lastBuildDate>
+<item><title>Taking payments in a custom app: fees, PCI scope, and what to own</title>
+<link>https://xsatorilabs.net/blog/taking-payments-in-a-custom-app/</link>
+<guid isPermaLink="true">https://xsatorilabs.net/blog/taking-payments-in-a-custom-app/</guid>
+<description>What business owners should know before adding payments to a custom app: processor fees, PCI compliance scope, refunds and disputes, and keeping control of the account.</description>
+<pubDate>Fri, 27 Nov 2026 13:00:00 +0000</pubDate>
+</item><item><title>A year-end tech housekeeping checklist for small businesses</title>
 <link>https://xsatorilabs.net/blog/year-end-tech-housekeeping-checklist/</link>
 <guid isPermaLink="true">https://xsatorilabs.net/blog/year-end-tech-housekeeping-checklist/</guid>
 <description>A practical year-end checklist for your business technology: domains, certificates, accounts, subscriptions, backups, and documentation to sort out before 2027.</description>
@@ -149,9 +154,4 @@
 <guid isPermaLink="true">https://xsatorilabs.net/blog/outgrown-your-spreadsheets/</guid>
 <description>Spreadsheets scale further than people expect and then fail suddenly. Here's how to recognize the transition before it costs you a customer.</description>
 <pubDate>Mon, 21 Sep 2026 13:00:00 +0000</pubDate>
-</item><item><title>Fixed bid vs. time and materials: which contract actually protects you</title>
-<link>https://xsatorilabs.net/blog/fixed-bid-vs-time-and-materials/</link>
-<guid isPermaLink="true">https://xsatorilabs.net/blog/fixed-bid-vs-time-and-materials/</guid>
-<description>Fixed bid feels safer and often isn't. Here's what each structure really does to incentives, and how to pick without getting burned.</description>
-<pubDate>Fri, 18 Sep 2026 13:00:00 +0000</pubDate>
 </item></channel></rss>
